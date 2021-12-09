@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D950BE2-44CB-496F-9BB9-F3034B17F687}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Chanh_Coffee</RootNamespace>
+    <AssemblyName>Chanh_Coffee</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\AccountDAO.cs" />
+    <Compile Include="Control\DataProvider.cs" />
+    <Compile Include="Control\UserDAO.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\BillInfo.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="View\Admin Side\fAddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin Side\fAddNewUser.Designer.cs">
+      <DependentUpon>fAddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin Side\fAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin Side\fAddProduct.Designer.cs">
+      <DependentUpon>fAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin Side\fAdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin Side\fAdminPanel.Designer.cs">
+      <DependentUpon>fAdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employee Side\fProcessOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Employee Side\fProcessOrder.Designer.cs">
+      <DependentUpon>fProcessOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fLogin.designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormActivityLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormActivityLog.Designer.cs">
+      <DependentUpon>FormActivityLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormAddProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormAddProduct.Designer.cs">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormAddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormAddUser.Designer.cs">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormDashboard.Designer.cs">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormManageProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormManageProducts.Designer.cs">
+      <DependentUpon>FormManageProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormProductArchive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormProductArchive.Designer.cs">
+      <DependentUpon>FormProductArchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormSaleReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormSaleReport.Designer.cs">
+      <DependentUpon>FormSaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormTransactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormTransactions.Designer.cs">
+      <DependentUpon>FormTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormUpdateCurrentUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormUpdateCurrentUser.Designer.cs">
+      <DependentUpon>FormUpdateCurrentUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormUpdateProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormUpdateProduct.Designer.cs">
+      <DependentUpon>FormUpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormUpdateUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormUpdateUser.Designer.cs">
+      <DependentUpon>FormUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormUSerArchive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormUSerArchive.Designer.cs">
+      <DependentUpon>FormUSerArchive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\Interface1.cs" />
+    <Compile Include="Asset\UserControls\FormLoading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\FormLoading.Designer.cs">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\FormOrderPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\FormOrderPanel.Designer.cs">
+      <DependentUpon>FormOrderPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Asset\UserControls\BaseForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\FormAdminLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\FormAdminLogin.Designer.cs">
+      <DependentUpon>FormAdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\FormAdminPanelcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\FormAdminPanelcs.Designer.cs">
+      <DependentUpon>FormAdminPanelcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\FormRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\FormRegistration.Designer.cs">
+      <DependentUpon>FormRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\OderForms\FormOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\OderForms\FormOrder.Designer.cs">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\OderForms\FormUpdatePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\OderForms\FormUpdatePassword.Designer.cs">
+      <DependentUpon>FormUpdatePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\OderForms\ProcessOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\OderForms\ProcessOrder.Designer.cs">
+      <DependentUpon>ProcessOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Employee Side\fOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Employee Side\fOrder.Designer.cs">
+      <DependentUpon>fOrder.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Admin Side\fAddNewUser.resx">
+      <DependentUpon>fAddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin Side\fAddProduct.resx">
+      <DependentUpon>fAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin Side\fAdminPanel.resx">
+      <DependentUpon>fAdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Employee Side\fProcessOrder.resx">
+      <DependentUpon>fProcessOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormActivityLog.resx">
+      <DependentUpon>FormActivityLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormAddProduct.resx">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormAddUser.resx">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormDashboard.resx">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormManageProducts.resx">
+      <DependentUpon>FormManageProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormProductArchive.resx">
+      <DependentUpon>FormProductArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormSaleReport.resx">
+      <DependentUpon>FormSaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormTransactions.resx">
+      <DependentUpon>FormTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormUpdateCurrentUser.resx">
+      <DependentUpon>FormUpdateCurrentUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormUpdateProduct.resx">
+      <DependentUpon>FormUpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormUpdateUser.resx">
+      <DependentUpon>FormUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormUSerArchive.resx">
+      <DependentUpon>FormUSerArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\FormAdminPanelcs.resx">
+      <DependentUpon>FormAdminPanelcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\FormLoading.resx">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\FormOrderPanel.resx">
+      <DependentUpon>FormOrderPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\FormRegistration.resx">
+      <DependentUpon>FormRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\OderForms\FormOrder.resx">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\OderForms\FormUpdatePassword.resx">
+      <DependentUpon>FormUpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\OderForms\ProcessOrder.resx">
+      <DependentUpon>ProcessOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Employee Side\fOrder.resx">
+      <DependentUpon>fOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Asset\Resources\262856122_6774363702636178_3999548650883861370_n.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
