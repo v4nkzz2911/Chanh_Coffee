@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 
-namespace Chanh_Coffee.Control
+namespace Chanh_Coffee.Controls
 {
     public class AccountDAO
     {

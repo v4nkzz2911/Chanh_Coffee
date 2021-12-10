@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace Chanh_Coffee.Control
+namespace Chanh_Coffee.Controls
 {
     public class DataProvider
     {

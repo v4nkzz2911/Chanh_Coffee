@@ -1,4 +1,4 @@
-﻿using Chanh_Coffee.Control;
+﻿using Chanh_Coffee.Controls;
 using Chanh_Coffee.Models;
 using System;
 using System.Collections.Generic;

@@ -5,24 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyQuanCafe.DTO
+namespace Chanh_Coffee.Models
 {
     public class Food
     {
-        public Food(int id, string name, int categoryID, float price)
+        public Food(int id, string name, int categoryID, float price, string image)
         {
             this.ID = id;
             this.Name = name;
             this.CategoryID = categoryID;
             this.Price = price;
+            this.Image = image;
         }
 
         public Food(DataRow row)
         {
-            this.ID = (int)row["id"];
-            this.Name = row["name"].ToString();
-            this.CategoryID = (int)row["idcategory"];
-            this.Price = (float)Convert.ToDouble(row["price"].ToString());
+            this.ID = (int)row["IdFood"];
+            this.Name = row["FoodName"].ToString();
+            this.CategoryID = (int)row["IdCate"];
+            this.Price = (float)Convert.ToDouble(row["Price"].ToString());
+            this.Image = row["Image"].ToString();
         }
 
         private float price;
@@ -56,5 +58,9 @@ namespace QuanLyQuanCafe.DTO
             get { return iD; }
             set { iD = value; }
         }
+
+        public string Image { get => image; set => image = value; }
+
+        private string image;
     }
 }

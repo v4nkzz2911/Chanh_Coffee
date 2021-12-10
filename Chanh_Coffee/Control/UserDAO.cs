@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chanh_Coffee.Control
+namespace Chanh_Coffee.Controls
 {
     public class UserDAO
     {

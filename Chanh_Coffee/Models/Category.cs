@@ -5,36 +5,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyQuanCafe.DTO
+namespace Chanh_Coffee.Models
 {
     public class Category
     {
         public Category(int id, string name)
         {
-            this.ID = id;
-            this.Name = name;
+            this.idCategory = id;
+            this.groupName = name;
         }
 
         public Category(DataRow row)
         {
-            this.ID = (int)row["id"];
-            this.Name = row["name"].ToString();
+            this.idCategory =(int) row["IdCategory"];
+            this.groupName = row["GroupName"].ToString();
         }
 
-        private string name;
+        private int idCategory;
+        private string groupName;
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        public int IdCategory { get => idCategory; set => idCategory = value; }
+        public string GroupName { get => groupName; set => groupName = value; }
 
-        private int iD;
-
-        public int ID
-        {
-            get { return iD; }
-            set { iD = value; }
-        }
+        
     }
 }
