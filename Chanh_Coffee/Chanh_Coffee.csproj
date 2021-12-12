@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Chanh_Coffee</RootNamespace>
     <AssemblyName>Chanh_Coffee</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +35,27 @@
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -74,17 +96,23 @@
     <Compile Include="Asset\UserControls\OderForms\UserItem.Designer.cs">
       <DependentUpon>UserItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\AccountDAO.cs" />
-    <Compile Include="Control\CategoryDAO.cs" />
-    <Compile Include="Control\DataProvider.cs" />
-    <Compile Include="Control\FoodDAO.cs" />
-    <Compile Include="Control\UserDAO.cs" />
+    <Compile Include="Controls\AccountDAO.cs" />
+    <Compile Include="Controls\BillDAO.cs" />
+    <Compile Include="Controls\BillInfoDAO.cs" />
+    <Compile Include="Controls\CategoryDAO.cs" />
+    <Compile Include="Controls\DataProvider.cs" />
+    <Compile Include="Controls\FoodDAO.cs" />
+    <Compile Include="Controls\PromotionDAO.cs" />
+    <Compile Include="Controls\UserDAO.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\BillInfo.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Promotion.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="View\Admin Side\fAddNewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +320,7 @@
     <EmbeddedResource Include="View\Employee Side\fProcessOrder.resx">
       <DependentUpon>fProcessOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Employee Side\Report1.rdlc" />
     <EmbeddedResource Include="View\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +404,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Chanh_Coffee.Asset.UserControls.OderForms.ItemStandbyOrder.datasource" />
+    <None Include="Properties\DataSources\Chanh_Coffee.Models.Order.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -396,6 +427,19 @@
     <Content Include="Asset\Resources\FoodIMG\Tra_hoa_cuc.jpg" />
     <Content Include="Asset\Resources\FoodIMG\Tra_nhai.jpg" />
     <Content Include="Asset\Resources\FoodIMG\Tra_sua.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

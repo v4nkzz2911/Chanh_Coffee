@@ -13,12 +13,13 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
 {
     public partial class ItemStandbyOrder : UserControl
     {
+        public Food item;
         public ItemStandbyOrder(Food item)
         {
             InitializeComponent();
             itemName.Text = item.Name;
             itemPrice.Text = item.Price.ToString();
-
+            this.item = item;
         }
 
         private void btnDown_Click(object sender, EventArgs e)

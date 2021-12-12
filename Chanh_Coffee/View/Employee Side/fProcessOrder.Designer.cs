@@ -29,15 +29,21 @@ namespace Chanh_Coffee.View.Employee_Side
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.OrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ButtonClose = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonPrint = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderBindingSource)).BeginInit();
             this.guna2Panel3.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // OrderBindingSource
+            // 
+            this.OrderBindingSource.DataSource = typeof(Chanh_Coffee.Models.Order);
             // 
             // ButtonClose
             // 
@@ -89,7 +95,7 @@ namespace Chanh_Coffee.View.Employee_Side
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.SeaGreen;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -100,46 +106,36 @@ namespace Chanh_Coffee.View.Employee_Side
             this.label1.Text = "Successful Transaction";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2Panel1
+            // reportViewer1
             // 
-            this.guna2Panel1.AutoScroll = true;
-            this.guna2Panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(23, 106);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(357, 373);
-            this.guna2Panel1.TabIndex = 8;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(14, 15);
-            this.guna2HtmlLabel1.MaximumSize = new System.Drawing.Size(330, 0);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
-            this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = null;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.OrderBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Chanh_Coffee.View.Employee Side.Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "";
+            this.reportViewer1.Location = new System.Drawing.Point(4, 106);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(391, 385);
+            this.reportViewer1.TabIndex = 12;
             // 
             // fProcessOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 558);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.ButtonClose);
             this.Controls.Add(this.ButtonPrint);
             this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.guna2Panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "fProcessOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh toán";
+            this.Load += new System.EventHandler(this.fProcessOrder_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.OrderBindingSource)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -150,7 +146,7 @@ namespace Chanh_Coffee.View.Employee_Side
         private Guna.UI2.WinForms.Guna2Button ButtonPrint;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource OrderBindingSource;
     }
 }

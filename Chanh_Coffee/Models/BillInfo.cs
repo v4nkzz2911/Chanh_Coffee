@@ -19,10 +19,10 @@ namespace Chanh_Coffee.Models
 
         public BillInfo(DataRow row)
         {
-            this.ID = (int)row["id"];
-            this.BillID = (int)row["idbill"];
-            this.FoodID = (int)row["idfood"];
-            this.Count = (int)row["count"];
+            this.ID = (int)row["IdBillInf"];
+            this.BillID = (int)row["IdBill"];
+            this.FoodID = (int)row["IdFood"];
+            this.Count = (int)row["Count"];
         }
 
         private int count;

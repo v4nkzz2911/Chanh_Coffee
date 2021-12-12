@@ -38,6 +38,7 @@ namespace Chanh_Coffee.View
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.flowLayoutPanelFoodMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.TextQuery = new Guna.UI2.WinForms.Guna2TextBox();
             this.ButtonSearch = new Guna.UI2.WinForms.Guna2Button();
@@ -48,10 +49,12 @@ namespace Chanh_Coffee.View
             this.btnTea = new Guna.UI2.WinForms.Guna2Button();
             this.btnCake = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ButtonNewOrder = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanelOrderList = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.ButtonClear = new Guna.UI2.WinForms.Guna2Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.CustomerPayment = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.ButtonProccess = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonCalculateChange = new Guna.UI2.WinForms.Guna2Button();
             this.LabelChange = new System.Windows.Forms.Label();
@@ -62,9 +65,9 @@ namespace Chanh_Coffee.View
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ButtonNewOrder = new Guna.UI2.WinForms.Guna2Button();
-            this.CustomerPayment = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.flowLayoutPanelFoodMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbxPromo = new System.Windows.Forms.ComboBox();
+            this.PromoDes = new System.Windows.Forms.Label();
+            this.PromoAmount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).BeginInit();
             this.panel3.SuspendLayout();
@@ -73,9 +76,9 @@ namespace Chanh_Coffee.View
             this.ButtonsMenu.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerPayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerPayment)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -158,7 +161,7 @@ namespace Chanh_Coffee.View
             this.panel3.Controls.Add(this.guna2Panel2);
             this.panel3.Location = new System.Drawing.Point(7, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1184, 623);
+            this.panel3.Size = new System.Drawing.Size(1184, 665);
             this.panel3.TabIndex = 0;
             // 
             // guna2Panel1
@@ -174,8 +177,18 @@ namespace Chanh_Coffee.View
             this.guna2Panel1.Location = new System.Drawing.Point(5, 12);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(704, 604);
+            this.guna2Panel1.Size = new System.Drawing.Size(704, 646);
             this.guna2Panel1.TabIndex = 12;
+            // 
+            // flowLayoutPanelFoodMenu
+            // 
+            this.flowLayoutPanelFoodMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanelFoodMenu.Location = new System.Drawing.Point(13, 119);
+            this.flowLayoutPanelFoodMenu.Name = "flowLayoutPanelFoodMenu";
+            this.flowLayoutPanelFoodMenu.Size = new System.Drawing.Size(691, 527);
+            this.flowLayoutPanelFoodMenu.TabIndex = 9;
             // 
             // guna2Panel3
             // 
@@ -401,8 +414,27 @@ namespace Chanh_Coffee.View
             this.guna2Panel2.Location = new System.Drawing.Point(715, 12);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(462, 604);
+            this.guna2Panel2.Size = new System.Drawing.Size(462, 646);
             this.guna2Panel2.TabIndex = 13;
+            // 
+            // ButtonNewOrder
+            // 
+            this.ButtonNewOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ButtonNewOrder.CheckedState.Parent = this.ButtonNewOrder;
+            this.ButtonNewOrder.CustomImages.Parent = this.ButtonNewOrder;
+            this.ButtonNewOrder.DisabledState.Parent = this.ButtonNewOrder;
+            this.ButtonNewOrder.FillColor = System.Drawing.Color.SeaGreen;
+            this.ButtonNewOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ButtonNewOrder.ForeColor = System.Drawing.Color.White;
+            this.ButtonNewOrder.HoverState.Parent = this.ButtonNewOrder;
+            this.ButtonNewOrder.Location = new System.Drawing.Point(10, 439);
+            this.ButtonNewOrder.Margin = new System.Windows.Forms.Padding(0);
+            this.ButtonNewOrder.Name = "ButtonNewOrder";
+            this.ButtonNewOrder.ShadowDecoration.Parent = this.ButtonNewOrder;
+            this.ButtonNewOrder.Size = new System.Drawing.Size(169, 40);
+            this.ButtonNewOrder.TabIndex = 8;
+            this.ButtonNewOrder.Text = "Order mới";
+            this.ButtonNewOrder.Click += new System.EventHandler(this.ButtonNewOrder_Click);
             // 
             // flowLayoutPanelOrderList
             // 
@@ -412,7 +444,7 @@ namespace Chanh_Coffee.View
             this.flowLayoutPanelOrderList.AutoScroll = true;
             this.flowLayoutPanelOrderList.Location = new System.Drawing.Point(10, 70);
             this.flowLayoutPanelOrderList.Name = "flowLayoutPanelOrderList";
-            this.flowLayoutPanelOrderList.Size = new System.Drawing.Size(439, 324);
+            this.flowLayoutPanelOrderList.Size = new System.Drawing.Size(439, 366);
             this.flowLayoutPanelOrderList.TabIndex = 7;
             // 
             // guna2Separator1
@@ -432,7 +464,7 @@ namespace Chanh_Coffee.View
             this.ButtonClear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ButtonClear.ForeColor = System.Drawing.Color.Black;
             this.ButtonClear.HoverState.Parent = this.ButtonClear;
-            this.ButtonClear.Location = new System.Drawing.Point(280, 397);
+            this.ButtonClear.Location = new System.Drawing.Point(280, 439);
             this.ButtonClear.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonClear.Name = "ButtonClear";
             this.ButtonClear.ShadowDecoration.Parent = this.ButtonClear;
@@ -445,6 +477,9 @@ namespace Chanh_Coffee.View
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.PromoAmount);
+            this.panel5.Controls.Add(this.PromoDes);
+            this.panel5.Controls.Add(this.cbxPromo);
             this.panel5.Controls.Add(this.CustomerPayment);
             this.panel5.Controls.Add(this.ButtonProccess);
             this.panel5.Controls.Add(this.ButtonCalculateChange);
@@ -453,10 +488,44 @@ namespace Chanh_Coffee.View
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(10, 440);
+            this.panel5.Location = new System.Drawing.Point(10, 482);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(439, 153);
             this.panel5.TabIndex = 2;
+            // 
+            // CustomerPayment
+            // 
+            this.CustomerPayment.BackColor = System.Drawing.Color.Transparent;
+            this.CustomerPayment.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.CustomerPayment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.CustomerPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.CustomerPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.CustomerPayment.DisabledState.Parent = this.CustomerPayment;
+            this.CustomerPayment.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.CustomerPayment.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.CustomerPayment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CustomerPayment.FocusedState.Parent = this.CustomerPayment;
+            this.CustomerPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.CustomerPayment.ForeColor = System.Drawing.Color.Red;
+            this.CustomerPayment.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.CustomerPayment.Location = new System.Drawing.Point(92, 37);
+            this.CustomerPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CustomerPayment.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.CustomerPayment.Name = "CustomerPayment";
+            this.CustomerPayment.ShadowDecoration.Parent = this.CustomerPayment;
+            this.CustomerPayment.Size = new System.Drawing.Size(236, 36);
+            this.CustomerPayment.TabIndex = 2;
+            this.CustomerPayment.ThousandsSeparator = true;
+            this.CustomerPayment.UpDownButtonBorderVisible = false;
+            this.CustomerPayment.UpDownButtonFillColor = System.Drawing.Color.LightGray;
             // 
             // ButtonProccess
             // 
@@ -489,10 +558,10 @@ namespace Chanh_Coffee.View
             this.ButtonCalculateChange.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ButtonCalculateChange.ForeColor = System.Drawing.Color.DimGray;
             this.ButtonCalculateChange.HoverState.Parent = this.ButtonCalculateChange;
-            this.ButtonCalculateChange.Location = new System.Drawing.Point(314, 37);
+            this.ButtonCalculateChange.Location = new System.Drawing.Point(335, 37);
             this.ButtonCalculateChange.Name = "ButtonCalculateChange";
             this.ButtonCalculateChange.ShadowDecoration.Parent = this.ButtonCalculateChange;
-            this.ButtonCalculateChange.Size = new System.Drawing.Size(122, 36);
+            this.ButtonCalculateChange.Size = new System.Drawing.Size(98, 36);
             this.ButtonCalculateChange.TabIndex = 2;
             this.ButtonCalculateChange.Text = "Tính tiền dư";
             this.ButtonCalculateChange.Click += new System.EventHandler(this.ButtonCalculateChange_Click);
@@ -505,9 +574,9 @@ namespace Chanh_Coffee.View
             this.LabelChange.ForeColor = System.Drawing.Color.Red;
             this.LabelChange.Location = new System.Drawing.Point(91, 80);
             this.LabelChange.Name = "LabelChange";
-            this.LabelChange.Size = new System.Drawing.Size(51, 21);
+            this.LabelChange.Size = new System.Drawing.Size(19, 21);
             this.LabelChange.TabIndex = 0;
-            this.LabelChange.Text = "0PHP";
+            this.LabelChange.Text = "0";
             // 
             // LabelTotal
             // 
@@ -583,77 +652,45 @@ namespace Chanh_Coffee.View
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(0, 52);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1194, 635);
+            this.panel2.Size = new System.Drawing.Size(1194, 677);
             this.panel2.TabIndex = 6;
             // 
-            // ButtonNewOrder
+            // cbxPromo
             // 
-            this.ButtonNewOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ButtonNewOrder.CheckedState.Parent = this.ButtonNewOrder;
-            this.ButtonNewOrder.CustomImages.Parent = this.ButtonNewOrder;
-            this.ButtonNewOrder.DisabledState.Parent = this.ButtonNewOrder;
-            this.ButtonNewOrder.FillColor = System.Drawing.Color.SeaGreen;
-            this.ButtonNewOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ButtonNewOrder.ForeColor = System.Drawing.Color.White;
-            this.ButtonNewOrder.HoverState.Parent = this.ButtonNewOrder;
-            this.ButtonNewOrder.Location = new System.Drawing.Point(10, 397);
-            this.ButtonNewOrder.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonNewOrder.Name = "ButtonNewOrder";
-            this.ButtonNewOrder.ShadowDecoration.Parent = this.ButtonNewOrder;
-            this.ButtonNewOrder.Size = new System.Drawing.Size(169, 40);
-            this.ButtonNewOrder.TabIndex = 8;
-            this.ButtonNewOrder.Text = "Order mới";
-            this.ButtonNewOrder.Click += new System.EventHandler(this.ButtonNewOrder_Click);
+            this.cbxPromo.FormattingEnabled = true;
+            this.cbxPromo.Location = new System.Drawing.Point(335, 13);
+            this.cbxPromo.Name = "cbxPromo";
+            this.cbxPromo.Size = new System.Drawing.Size(98, 21);
+            this.cbxPromo.TabIndex = 7;
+            this.cbxPromo.SelectedIndexChanged += new System.EventHandler(this.cbxPromo_SelectedIndexChanged);
             // 
-            // CustomerPayment
+            // PromoDes
             // 
-            this.CustomerPayment.BackColor = System.Drawing.Color.Transparent;
-            this.CustomerPayment.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CustomerPayment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.CustomerPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.CustomerPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.CustomerPayment.DisabledState.Parent = this.CustomerPayment;
-            this.CustomerPayment.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.CustomerPayment.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.CustomerPayment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CustomerPayment.FocusedState.Parent = this.CustomerPayment;
-            this.CustomerPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.CustomerPayment.ForeColor = System.Drawing.Color.Red;
-            this.CustomerPayment.Increment = new decimal(new int[] {
-            25,
-            0,
-            0,
-            131072});
-            this.CustomerPayment.Location = new System.Drawing.Point(92, 37);
-            this.CustomerPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.CustomerPayment.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.CustomerPayment.Name = "CustomerPayment";
-            this.CustomerPayment.ShadowDecoration.Parent = this.CustomerPayment;
-            this.CustomerPayment.Size = new System.Drawing.Size(213, 36);
-            this.CustomerPayment.TabIndex = 2;
-            this.CustomerPayment.ThousandsSeparator = true;
-            this.CustomerPayment.UpDownButtonBorderVisible = false;
-            this.CustomerPayment.UpDownButtonFillColor = System.Drawing.Color.LightGray;
+            this.PromoDes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PromoDes.AutoSize = true;
+            this.PromoDes.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.PromoDes.Location = new System.Drawing.Point(221, 77);
+            this.PromoDes.Name = "PromoDes";
+            this.PromoDes.Size = new System.Drawing.Size(87, 21);
+            this.PromoDes.TabIndex = 8;
+            this.PromoDes.Text = "Promo Des";
             // 
-            // flowLayoutPanelFoodMenu
+            // PromoAmount
             // 
-            this.flowLayoutPanelFoodMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanelFoodMenu.Location = new System.Drawing.Point(13, 119);
-            this.flowLayoutPanelFoodMenu.Name = "flowLayoutPanelFoodMenu";
-            this.flowLayoutPanelFoodMenu.Size = new System.Drawing.Size(691, 485);
-            this.flowLayoutPanelFoodMenu.TabIndex = 9;
+            this.PromoAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PromoAmount.AutoSize = true;
+            this.PromoAmount.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.PromoAmount.Location = new System.Drawing.Point(221, 12);
+            this.PromoAmount.Name = "PromoAmount";
+            this.PromoAmount.Size = new System.Drawing.Size(108, 21);
+            this.PromoAmount.TabIndex = 9;
+            this.PromoAmount.Text = "Promo Amout";
             // 
             // fOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 682);
+            this.ClientSize = new System.Drawing.Size(1198, 724);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -672,9 +709,9 @@ namespace Chanh_Coffee.View
             this.guna2Panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerPayment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerPayment)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -715,5 +752,8 @@ namespace Chanh_Coffee.View
         private Guna.UI2.WinForms.Guna2Button ButtonNewOrder;
         private Guna.UI2.WinForms.Guna2NumericUpDown CustomerPayment;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelFoodMenu;
+        private System.Windows.Forms.ComboBox cbxPromo;
+        private System.Windows.Forms.Label PromoAmount;
+        private System.Windows.Forms.Label PromoDes;
     }
 }
