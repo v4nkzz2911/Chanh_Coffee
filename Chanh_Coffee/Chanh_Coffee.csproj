@@ -422,6 +422,8 @@
   <ItemGroup>
     <Content Include="Asset\Resources\262856122_6774363702636178_3999548650883861370_n.png" />
     <Content Include="Asset\Resources\FoodIMG\Bo_huc.jpg" />
+    <Content Include="Asset\Resources\FoodIMG\Cafe_bacxiu.jpg" />
+    <Content Include="Asset\Resources\FoodIMG\Cafe_cappuccino.jpg" />
     <Content Include="Asset\Resources\FoodIMG\Coca.jpg" />
     <Content Include="Asset\Resources\FoodIMG\Mousse_cd.jpg" />
     <Content Include="Asset\Resources\FoodIMG\Tra_hoa_cuc.jpg" />

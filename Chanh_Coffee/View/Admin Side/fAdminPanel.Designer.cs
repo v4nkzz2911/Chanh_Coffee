@@ -34,7 +34,6 @@ namespace Chanh_Coffee.View.Admin_Side
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ButtonManageProduct = new Guna.UI2.WinForms.Guna2Button();
-            this.ButtonTransaction = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonSales = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonUsers = new Guna.UI2.WinForms.Guna2Button();
             this.txtSessionUser = new System.Windows.Forms.Label();
@@ -47,7 +46,6 @@ namespace Chanh_Coffee.View.Admin_Side
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
             this.formProductArchive1 = new Chanh_Coffee.View.AdminForms.FormProductArchive();
-            this.formTransactions1 = new Chanh_Coffee.View.AdminForms.FormTransactions();
             this.formUsers1 = new Chanh_Coffee.View.AdminForms.FormUsers();
             this.formManageProducts1 = new Chanh_Coffee.View.AdminForms.FormManageProducts();
             this.formSaleReport1 = new Chanh_Coffee.View.AdminForms.FormSaleReport();
@@ -66,7 +64,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(731, 9);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(855, 9);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(30, 30);
@@ -82,7 +80,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(340, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(771, 50);
+            this.panel4.Size = new System.Drawing.Size(895, 50);
             this.panel4.TabIndex = 7;
             // 
             // label3
@@ -131,32 +129,6 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonManageProduct.Text = "Quản lý món";
             this.ButtonManageProduct.Click += new System.EventHandler(this.ButtonManageProduct_Click);
             // 
-            // ButtonTransaction
-            // 
-            this.ButtonTransaction.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.ButtonTransaction.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(7)))));
-            this.ButtonTransaction.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.ButtonTransaction.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.ButtonTransaction.CheckedState.Parent = this.ButtonTransaction;
-            this.ButtonTransaction.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.ButtonTransaction.CustomImages.Parent = this.ButtonTransaction;
-            this.ButtonTransaction.DisabledState.Parent = this.ButtonTransaction;
-            this.ButtonTransaction.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ButtonTransaction.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ButtonTransaction.ForeColor = System.Drawing.Color.Gray;
-            this.ButtonTransaction.HoverState.Parent = this.ButtonTransaction;
-            this.ButtonTransaction.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ButtonTransaction.ImageOffset = new System.Drawing.Point(20, 0);
-            this.ButtonTransaction.Location = new System.Drawing.Point(0, 45);
-            this.ButtonTransaction.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonTransaction.Name = "ButtonTransaction";
-            this.ButtonTransaction.ShadowDecoration.Parent = this.ButtonTransaction;
-            this.ButtonTransaction.Size = new System.Drawing.Size(340, 45);
-            this.ButtonTransaction.TabIndex = 11;
-            this.ButtonTransaction.Tag = "4";
-            this.ButtonTransaction.Text = "Lịch sử thanh toán";
-            this.ButtonTransaction.Click += new System.EventHandler(this.ButtonTransaction_Click);
-            // 
             // ButtonSales
             // 
             this.ButtonSales.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -173,7 +145,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonSales.HoverState.Parent = this.ButtonSales;
             this.ButtonSales.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ButtonSales.ImageOffset = new System.Drawing.Point(20, 0);
-            this.ButtonSales.Location = new System.Drawing.Point(0, 90);
+            this.ButtonSales.Location = new System.Drawing.Point(0, 45);
             this.ButtonSales.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonSales.Name = "ButtonSales";
             this.ButtonSales.ShadowDecoration.Parent = this.ButtonSales;
@@ -199,7 +171,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonUsers.HoverState.Parent = this.ButtonUsers;
             this.ButtonUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ButtonUsers.ImageOffset = new System.Drawing.Point(20, 0);
-            this.ButtonUsers.Location = new System.Drawing.Point(0, 135);
+            this.ButtonUsers.Location = new System.Drawing.Point(0, 90);
             this.ButtonUsers.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonUsers.Name = "ButtonUsers";
             this.ButtonUsers.ShadowDecoration.Parent = this.ButtonUsers;
@@ -236,7 +208,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonArchives.HoverState.Parent = this.ButtonArchives;
             this.ButtonArchives.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ButtonArchives.ImageOffset = new System.Drawing.Point(20, 0);
-            this.ButtonArchives.Location = new System.Drawing.Point(0, 180);
+            this.ButtonArchives.Location = new System.Drawing.Point(0, 135);
             this.ButtonArchives.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonArchives.Name = "ButtonArchives";
             this.ButtonArchives.ShadowDecoration.Parent = this.ButtonArchives;
@@ -259,7 +231,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonLogout.HoverState.Parent = this.ButtonLogout;
             this.ButtonLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ButtonLogout.ImageOffset = new System.Drawing.Point(20, 0);
-            this.ButtonLogout.Location = new System.Drawing.Point(0, 225);
+            this.ButtonLogout.Location = new System.Drawing.Point(0, 180);
             this.ButtonLogout.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonLogout.Name = "ButtonLogout";
             this.ButtonLogout.ShadowDecoration.Parent = this.ButtonLogout;
@@ -273,14 +245,13 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonsMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.ButtonsMenuPanel.Controls.Add(this.ButtonManageProduct);
-            this.ButtonsMenuPanel.Controls.Add(this.ButtonTransaction);
             this.ButtonsMenuPanel.Controls.Add(this.ButtonSales);
             this.ButtonsMenuPanel.Controls.Add(this.ButtonUsers);
             this.ButtonsMenuPanel.Controls.Add(this.ButtonArchives);
             this.ButtonsMenuPanel.Controls.Add(this.ButtonLogout);
             this.ButtonsMenuPanel.Location = new System.Drawing.Point(0, 150);
             this.ButtonsMenuPanel.Name = "ButtonsMenuPanel";
-            this.ButtonsMenuPanel.Size = new System.Drawing.Size(340, 486);
+            this.ButtonsMenuPanel.Size = new System.Drawing.Size(340, 557);
             this.ButtonsMenuPanel.TabIndex = 0;
             // 
             // panel1
@@ -293,7 +264,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 636);
+            this.panel1.Size = new System.Drawing.Size(340, 707);
             this.panel1.TabIndex = 5;
             // 
             // ButtonUpdateInfo
@@ -331,7 +302,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1111, 636);
+            this.panel5.Size = new System.Drawing.Size(1235, 707);
             this.panel5.TabIndex = 6;
             // 
             // panelContent
@@ -340,13 +311,12 @@ namespace Chanh_Coffee.View.Admin_Side
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContent.Controls.Add(this.formProductArchive1);
-            this.panelContent.Controls.Add(this.formTransactions1);
             this.panelContent.Controls.Add(this.formUsers1);
             this.panelContent.Controls.Add(this.formManageProducts1);
             this.panelContent.Controls.Add(this.formSaleReport1);
             this.panelContent.Location = new System.Drawing.Point(343, 52);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(761, 579);
+            this.panelContent.Size = new System.Drawing.Size(885, 650);
             this.panelContent.TabIndex = 0;
             // 
             // formProductArchive1
@@ -355,21 +325,10 @@ namespace Chanh_Coffee.View.Admin_Side
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.formProductArchive1.BackColor = System.Drawing.Color.White;
-            this.formProductArchive1.Location = new System.Drawing.Point(-3, 0);
+            this.formProductArchive1.Location = new System.Drawing.Point(-13, 482);
             this.formProductArchive1.Name = "formProductArchive1";
-            this.formProductArchive1.Size = new System.Drawing.Size(771, 593);
+            this.formProductArchive1.Size = new System.Drawing.Size(895, 664);
             this.formProductArchive1.TabIndex = 4;
-            // 
-            // formTransactions1
-            // 
-            this.formTransactions1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.formTransactions1.BackColor = System.Drawing.Color.White;
-            this.formTransactions1.Location = new System.Drawing.Point(-3, 0);
-            this.formTransactions1.Name = "formTransactions1";
-            this.formTransactions1.Size = new System.Drawing.Size(771, 579);
-            this.formTransactions1.TabIndex = 3;
             // 
             // formUsers1
             // 
@@ -377,9 +336,9 @@ namespace Chanh_Coffee.View.Admin_Side
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.formUsers1.BackColor = System.Drawing.Color.White;
-            this.formUsers1.Location = new System.Drawing.Point(1, 4);
+            this.formUsers1.Location = new System.Drawing.Point(-20, 323);
             this.formUsers1.Name = "formUsers1";
-            this.formUsers1.Size = new System.Drawing.Size(753, 568);
+            this.formUsers1.Size = new System.Drawing.Size(877, 639);
             this.formUsers1.TabIndex = 2;
             // 
             // formManageProducts1
@@ -388,9 +347,9 @@ namespace Chanh_Coffee.View.Admin_Side
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.formManageProducts1.BackColor = System.Drawing.Color.White;
-            this.formManageProducts1.Location = new System.Drawing.Point(1, 1);
+            this.formManageProducts1.Location = new System.Drawing.Point(-3, 257);
             this.formManageProducts1.Name = "formManageProducts1";
-            this.formManageProducts1.Size = new System.Drawing.Size(755, 572);
+            this.formManageProducts1.Size = new System.Drawing.Size(879, 643);
             this.formManageProducts1.TabIndex = 1;
             // 
             // formSaleReport1
@@ -399,19 +358,20 @@ namespace Chanh_Coffee.View.Admin_Side
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.formSaleReport1.BackColor = System.Drawing.Color.White;
-            this.formSaleReport1.Location = new System.Drawing.Point(3, 4);
+            this.formSaleReport1.Location = new System.Drawing.Point(-1, 0);
             this.formSaleReport1.Name = "formSaleReport1";
-            this.formSaleReport1.Size = new System.Drawing.Size(753, 569);
+            this.formSaleReport1.Size = new System.Drawing.Size(877, 640);
             this.formSaleReport1.TabIndex = 0;
             // 
             // fAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 636);
+            this.ClientSize = new System.Drawing.Size(1235, 707);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
+            this.MinimumSize = new System.Drawing.Size(1251, 746);
             this.Name = "fAdminPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Panel";
@@ -435,7 +395,6 @@ namespace Chanh_Coffee.View.Admin_Side
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button ButtonManageProduct;
-        private Guna.UI2.WinForms.Guna2Button ButtonTransaction;
         private Guna.UI2.WinForms.Guna2Button ButtonSales;
         private Guna.UI2.WinForms.Guna2Button ButtonUsers;
         private Guna.UI2.WinForms.Guna2CirclePictureBox PictureUserImage;
@@ -450,7 +409,6 @@ namespace Chanh_Coffee.View.Admin_Side
         private AdminForms.FormSaleReport formSaleReport1;
         private AdminForms.FormManageProducts formManageProducts1;
         private AdminForms.FormUsers formUsers1;
-        private AdminForms.FormTransactions formTransactions1;
         private AdminForms.FormProductArchive formProductArchive1;
     }
 }

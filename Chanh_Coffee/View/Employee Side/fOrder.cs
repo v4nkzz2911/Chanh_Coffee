@@ -93,7 +93,7 @@ namespace Chanh_Coffee.View
                     else
                     {
                         List<Order> listConfirmed = new List<Order>();
-                        BillDAO.Instance.InsertBill(CurrentSession.IdEmployee, listPromo[cbxPromo.SelectedIndex].IdPromo.ToString());
+                        BillDAO.Instance.InsertBill(CurrentSession.IdEmployee, listPromo[cbxPromo.SelectedIndex].IdPromo.ToString(), Int32.Parse((CustomerPayment.Value - changeMon).ToString()));
 
                         foreach (Control t in controlsarr)
                         {

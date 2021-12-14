@@ -21,9 +21,9 @@ namespace Chanh_Coffee.Controls
 
         private BillDAO() { }
 
-        public void InsertBill(string idEmp, string idPromo)
+        public void InsertBill(string idEmp, string idPromo, int totalPrice)
         {
-            DataProvider.Instace.ExcuteNonQuerry("exec USP_InsertBill @idEmp , @idPromo", new object[] { idEmp , idPromo});
+            DataProvider.Instace.ExcuteNonQuerry("exec USP_InsertBill @idEmp , @idPromo , @totalPrice", new object[] { idEmp , idPromo , totalPrice});
         }
 
         public int GetMaxIDBill()
@@ -50,6 +50,15 @@ namespace Chanh_Coffee.Controls
             return null;
 
             
+            
+        }
+
+        
+
+        public DataTable GetBillListByDateRange(string start , string end)
+        {
+            string command = "exec USP_GetListByDateRange '" + start + "' , '" + end + "'";
+            return DataProvider.Instace.ExcuteQuerry(command);
             
         }
     }

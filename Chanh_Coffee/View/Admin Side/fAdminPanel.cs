@@ -31,7 +31,7 @@ namespace Chanh_Coffee.View.Admin_Side
             formSaleReport1.Hide();
             formManageProducts1.Hide();
             formUsers1.Hide();
-            formTransactions1.Hide();
+            
             formProductArchive1.Hide();
         }
 
@@ -58,11 +58,7 @@ namespace Chanh_Coffee.View.Admin_Side
             formUsers1.Show();
         }
 
-        private void ButtonTransaction_Click(object sender, EventArgs e)
-        {
-            HideAllSubContent();
-            formTransactions1.Show();
-        }
+        
 
         private void ButtonArchives_Click(object sender, EventArgs e)
         {
