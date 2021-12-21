@@ -325,7 +325,7 @@ namespace Chanh_Coffee.View.Admin_Side
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.formProductArchive1.BackColor = System.Drawing.Color.White;
-            this.formProductArchive1.Location = new System.Drawing.Point(-13, 482);
+            this.formProductArchive1.Location = new System.Drawing.Point(-3, -3);
             this.formProductArchive1.Name = "formProductArchive1";
             this.formProductArchive1.Size = new System.Drawing.Size(895, 664);
             this.formProductArchive1.TabIndex = 4;
@@ -336,7 +336,7 @@ namespace Chanh_Coffee.View.Admin_Side
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.formUsers1.BackColor = System.Drawing.Color.White;
-            this.formUsers1.Location = new System.Drawing.Point(-20, 323);
+            this.formUsers1.Location = new System.Drawing.Point(-3, -3);
             this.formUsers1.Name = "formUsers1";
             this.formUsers1.Size = new System.Drawing.Size(877, 639);
             this.formUsers1.TabIndex = 2;
@@ -347,7 +347,7 @@ namespace Chanh_Coffee.View.Admin_Side
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.formManageProducts1.BackColor = System.Drawing.Color.White;
-            this.formManageProducts1.Location = new System.Drawing.Point(-3, 257);
+            this.formManageProducts1.Location = new System.Drawing.Point(-3, -3);
             this.formManageProducts1.Name = "formManageProducts1";
             this.formManageProducts1.Size = new System.Drawing.Size(879, 643);
             this.formManageProducts1.TabIndex = 1;

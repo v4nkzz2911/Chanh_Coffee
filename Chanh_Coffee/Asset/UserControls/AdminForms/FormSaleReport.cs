@@ -24,8 +24,11 @@ namespace Chanh_Coffee.View.AdminForms
         private void btnGetStat_Click(object sender, EventArgs e)
         {
             dataGridViewStat.DataSource = BillDAO.Instance.GetBillListByDateRange(DateTimeStart.Value.ToString("yyyy-MM-dd"), DateTimeEnd.Value.ToString("yyyy-MM-dd"));
-            
-            
+            for (int i = 0; i < dataGridViewStat.Rows.Count; i++)
+            {
+                dataGridViewStat.Rows[i].HeaderCell.Value = (i + 1).ToString();
+            }
+
         }
     }
 }

@@ -74,7 +74,7 @@ namespace Chanh_Coffee.View
             Control.ControlCollection controlsarr = flowLayoutPanelOrderList.Controls;
             if(controlsarr.Count ==0)
             {
-                MessageBox.Show("Order trống!");
+                MessageBox.Show("Order trống!", "Thông báo", MessageBoxButtons.OKCancel);
 
             }
             else
