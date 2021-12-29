@@ -34,5 +34,10 @@ namespace Chanh_Coffee.View.AdminForms
         {
 
         }
+
+        private void loadListUser(object sender, EventArgs e)
+        {
+
+        }
     }
 }

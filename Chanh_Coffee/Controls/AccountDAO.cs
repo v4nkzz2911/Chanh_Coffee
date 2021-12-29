@@ -48,5 +48,11 @@ namespace Chanh_Coffee.Controls
 
             return result.Rows[0]["Name"].ToString();
         }
+
+        public void ChangePassword(String username, String newpass)
+        {
+            string query = "exec USP_ChangePassword @username , @newpass ";
+            DataProvider.Instace.ExcuteNonQuerry(query, new object[] { username, newpass });
+        }
     }
 }

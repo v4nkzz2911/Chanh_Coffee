@@ -29,40 +29,11 @@ namespace Chanh_Coffee.View.AdminForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.PanelUsers = new System.Windows.Forms.Panel();
             this.ButtonAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Panel1.SuspendLayout();
+            this.dataGridViewUser = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel1.AutoScroll = true;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.PanelUsers);
-            this.guna2Panel1.Location = new System.Drawing.Point(42, 72);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(652, 365);
-            this.guna2Panel1.TabIndex = 12;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
-            // 
-            // PanelUsers
-            // 
-            this.PanelUsers.AutoSize = true;
-            this.PanelUsers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PanelUsers.BackColor = System.Drawing.Color.Transparent;
-            this.PanelUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelUsers.Location = new System.Drawing.Point(0, 0);
-            this.PanelUsers.MinimumSize = new System.Drawing.Size(625, 0);
-            this.PanelUsers.Name = "PanelUsers";
-            this.PanelUsers.Size = new System.Drawing.Size(652, 0);
-            this.PanelUsers.TabIndex = 0;
             // 
             // ButtonAddUser
             // 
@@ -93,28 +64,33 @@ namespace Chanh_Coffee.View.AdminForms
             this.label1.Text = "Danh sách người dùng";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // dataGridViewUser
+            // 
+            this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUser.Location = new System.Drawing.Point(42, 75);
+            this.dataGridViewUser.Name = "dataGridViewUser";
+            this.dataGridViewUser.Size = new System.Drawing.Size(651, 374);
+            this.dataGridViewUser.TabIndex = 12;
+            // 
             // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.dataGridViewUser);
             this.Controls.Add(this.ButtonAddUser);
             this.Controls.Add(this.label1);
             this.Name = "FormUsers";
             this.Size = new System.Drawing.Size(731, 528);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Panel PanelUsers;
         private Guna.UI2.WinForms.Guna2Button ButtonAddUser;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridViewUser;
     }
 }

@@ -21,5 +21,10 @@ namespace Chanh_Coffee.View.AdminForms
         {
             ((Form)this.TopLevelControl).Close();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

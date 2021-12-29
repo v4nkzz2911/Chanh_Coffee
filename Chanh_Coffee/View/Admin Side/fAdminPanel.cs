@@ -14,6 +14,7 @@ namespace Chanh_Coffee.View.Admin_Side
 {
     public partial class fAdminPanel : Form
     {
+        private Account CurrentSession;
         public fAdminPanel(Account session)
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace Chanh_Coffee.View.Admin_Side
             
             string currentSessionUserDisplay = AccountDAO.Instance.GetNameFromID(session.IdEmployee);
             txtSessionUser.Text = currentSessionUserDisplay;
+            CurrentSession = session;
             
             
             
@@ -64,6 +66,12 @@ namespace Chanh_Coffee.View.Admin_Side
         {
             HideAllSubContent();
             formProductArchive1.Show();
+        }
+
+        private void ButtonUpdateInfo_Click(object sender, EventArgs e)
+        {
+            fChangePassword fcp = new fChangePassword(CurrentSession);
+            fcp.ShowDialog();
         }
     }
 }

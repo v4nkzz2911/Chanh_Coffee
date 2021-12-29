@@ -29,7 +29,6 @@ namespace Chanh_Coffee.View.AdminForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddUser));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.LabelConfirmPassword = new System.Windows.Forms.Label();
             this.LabelPassword = new System.Windows.Forms.Label();
@@ -47,13 +46,9 @@ namespace Chanh_Coffee.View.AdminForms
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.ButtonChangeImage = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.PictureUserImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -76,21 +71,18 @@ namespace Chanh_Coffee.View.AdminForms
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.ButtonChangeImage);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.PictureUserImage);
             this.guna2Panel1.Location = new System.Drawing.Point(28, 70);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(811, 584);
+            this.guna2Panel1.Size = new System.Drawing.Size(812, 584);
             this.guna2Panel1.TabIndex = 6;
             // 
             // LabelConfirmPassword
             // 
             this.LabelConfirmPassword.AutoSize = true;
             this.LabelConfirmPassword.ForeColor = System.Drawing.Color.Red;
-            this.LabelConfirmPassword.Location = new System.Drawing.Point(303, 482);
+            this.LabelConfirmPassword.Location = new System.Drawing.Point(92, 471);
             this.LabelConfirmPassword.Name = "LabelConfirmPassword";
             this.LabelConfirmPassword.Size = new System.Drawing.Size(22, 13);
             this.LabelConfirmPassword.TabIndex = 16;
@@ -100,7 +92,7 @@ namespace Chanh_Coffee.View.AdminForms
             // 
             this.LabelPassword.AutoSize = true;
             this.LabelPassword.ForeColor = System.Drawing.Color.Red;
-            this.LabelPassword.Location = new System.Drawing.Point(303, 388);
+            this.LabelPassword.Location = new System.Drawing.Point(92, 377);
             this.LabelPassword.Name = "LabelPassword";
             this.LabelPassword.Size = new System.Drawing.Size(22, 13);
             this.LabelPassword.TabIndex = 15;
@@ -110,7 +102,7 @@ namespace Chanh_Coffee.View.AdminForms
             // 
             this.LabelEmail.AutoSize = true;
             this.LabelEmail.ForeColor = System.Drawing.Color.Red;
-            this.LabelEmail.Location = new System.Drawing.Point(303, 203);
+            this.LabelEmail.Location = new System.Drawing.Point(92, 192);
             this.LabelEmail.Name = "LabelEmail";
             this.LabelEmail.Size = new System.Drawing.Size(22, 13);
             this.LabelEmail.TabIndex = 15;
@@ -120,7 +112,7 @@ namespace Chanh_Coffee.View.AdminForms
             // 
             this.LabelName.AutoSize = true;
             this.LabelName.ForeColor = System.Drawing.Color.Red;
-            this.LabelName.Location = new System.Drawing.Point(303, 104);
+            this.LabelName.Location = new System.Drawing.Point(92, 93);
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(22, 13);
             this.LabelName.TabIndex = 15;
@@ -136,7 +128,7 @@ namespace Chanh_Coffee.View.AdminForms
             this.ButtonSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ButtonSave.ForeColor = System.Drawing.Color.White;
             this.ButtonSave.HoverState.Parent = this.ButtonSave;
-            this.ButtonSave.Location = new System.Drawing.Point(646, 518);
+            this.ButtonSave.Location = new System.Drawing.Point(436, 507);
             this.ButtonSave.Name = "ButtonSave";
             this.ButtonSave.ShadowDecoration.Parent = this.ButtonSave;
             this.ButtonSave.Size = new System.Drawing.Size(146, 45);
@@ -155,12 +147,13 @@ namespace Chanh_Coffee.View.AdminForms
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(306, 518);
+            this.guna2Button1.Location = new System.Drawing.Point(96, 507);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(146, 45);
             this.guna2Button1.TabIndex = 13;
             this.guna2Button1.Text = "Reset";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // ButtonBack
             // 
@@ -174,7 +167,7 @@ namespace Chanh_Coffee.View.AdminForms
             this.ButtonBack.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ButtonBack.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ButtonBack.HoverState.Parent = this.ButtonBack;
-            this.ButtonBack.Location = new System.Drawing.Point(476, 518);
+            this.ButtonBack.Location = new System.Drawing.Point(266, 507);
             this.ButtonBack.Name = "ButtonBack";
             this.ButtonBack.ShadowDecoration.Parent = this.ButtonBack;
             this.ButtonBack.Size = new System.Drawing.Size(146, 45);
@@ -198,7 +191,7 @@ namespace Chanh_Coffee.View.AdminForms
             "Cashier",
             "SubAdministrator"});
             this.ComboBoxRole.ItemsAppearance.Parent = this.ComboBoxRole;
-            this.ComboBoxRole.Location = new System.Drawing.Point(306, 256);
+            this.ComboBoxRole.Location = new System.Drawing.Point(95, 245);
             this.ComboBoxRole.Name = "ComboBoxRole";
             this.ComboBoxRole.ShadowDecoration.Parent = this.ComboBoxRole;
             this.ComboBoxRole.Size = new System.Drawing.Size(486, 36);
@@ -222,14 +215,14 @@ namespace Chanh_Coffee.View.AdminForms
             this.TextConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextConfirmPassword.HoverState.Parent = this.TextConfirmPassword;
-            this.TextConfirmPassword.Location = new System.Drawing.Point(306, 443);
+            this.TextConfirmPassword.Location = new System.Drawing.Point(95, 432);
             this.TextConfirmPassword.MaxLength = 100;
             this.TextConfirmPassword.Name = "TextConfirmPassword";
-            this.TextConfirmPassword.PasswordChar = '\0';
+            this.TextConfirmPassword.PasswordChar = '●';
             this.TextConfirmPassword.PlaceholderText = "Type the same password to confirm";
             this.TextConfirmPassword.SelectedText = "";
             this.TextConfirmPassword.ShadowDecoration.Parent = this.TextConfirmPassword;
-            this.TextConfirmPassword.Size = new System.Drawing.Size(486, 36);
+            this.TextConfirmPassword.Size = new System.Drawing.Size(487, 36);
             this.TextConfirmPassword.TabIndex = 4;
             this.TextConfirmPassword.UseSystemPasswordChar = true;
             // 
@@ -250,14 +243,14 @@ namespace Chanh_Coffee.View.AdminForms
             this.TextPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextPassword.HoverState.Parent = this.TextPassword;
-            this.TextPassword.Location = new System.Drawing.Point(306, 349);
+            this.TextPassword.Location = new System.Drawing.Point(95, 338);
             this.TextPassword.MaxLength = 100;
             this.TextPassword.Name = "TextPassword";
-            this.TextPassword.PasswordChar = '\0';
+            this.TextPassword.PasswordChar = '●';
             this.TextPassword.PlaceholderText = "Must be atleast 8 characters";
             this.TextPassword.SelectedText = "";
             this.TextPassword.ShadowDecoration.Parent = this.TextPassword;
-            this.TextPassword.Size = new System.Drawing.Size(486, 36);
+            this.TextPassword.Size = new System.Drawing.Size(487, 36);
             this.TextPassword.TabIndex = 3;
             this.TextPassword.UseSystemPasswordChar = true;
             // 
@@ -278,21 +271,21 @@ namespace Chanh_Coffee.View.AdminForms
             this.TextEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextEmail.HoverState.Parent = this.TextEmail;
-            this.TextEmail.Location = new System.Drawing.Point(306, 164);
+            this.TextEmail.Location = new System.Drawing.Point(95, 153);
             this.TextEmail.MaxLength = 100;
             this.TextEmail.Name = "TextEmail";
             this.TextEmail.PasswordChar = '\0';
             this.TextEmail.PlaceholderText = "(e.g. johndoe@domain.com)";
             this.TextEmail.SelectedText = "";
             this.TextEmail.ShadowDecoration.Parent = this.TextEmail;
-            this.TextEmail.Size = new System.Drawing.Size(486, 36);
+            this.TextEmail.Size = new System.Drawing.Size(487, 36);
             this.TextEmail.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(302, 410);
+            this.label6.Location = new System.Drawing.Point(91, 399);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 21);
             this.label6.TabIndex = 7;
@@ -315,21 +308,21 @@ namespace Chanh_Coffee.View.AdminForms
             this.TextName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextName.HoverState.Parent = this.TextName;
-            this.TextName.Location = new System.Drawing.Point(306, 65);
+            this.TextName.Location = new System.Drawing.Point(95, 54);
             this.TextName.MaxLength = 50;
             this.TextName.Name = "TextName";
             this.TextName.PasswordChar = '\0';
             this.TextName.PlaceholderText = "(e.g. John Doe)";
             this.TextName.SelectedText = "";
             this.TextName.ShadowDecoration.Parent = this.TextName;
-            this.TextName.Size = new System.Drawing.Size(486, 36);
+            this.TextName.Size = new System.Drawing.Size(487, 36);
             this.TextName.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(302, 316);
+            this.label5.Location = new System.Drawing.Point(91, 305);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 21);
             this.label5.TabIndex = 7;
@@ -339,7 +332,7 @@ namespace Chanh_Coffee.View.AdminForms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(302, 229);
+            this.label4.Location = new System.Drawing.Point(91, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 21);
             this.label4.TabIndex = 7;
@@ -349,50 +342,21 @@ namespace Chanh_Coffee.View.AdminForms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(302, 131);
+            this.label3.Location = new System.Drawing.Point(91, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 21);
             this.label3.TabIndex = 7;
             this.label3.Text = "Email";
             // 
-            // ButtonChangeImage
-            // 
-            this.ButtonChangeImage.Animated = true;
-            this.ButtonChangeImage.BorderColor = System.Drawing.Color.LightGray;
-            this.ButtonChangeImage.BorderThickness = 1;
-            this.ButtonChangeImage.CheckedState.Parent = this.ButtonChangeImage;
-            this.ButtonChangeImage.CustomImages.Parent = this.ButtonChangeImage;
-            this.ButtonChangeImage.DisabledState.Parent = this.ButtonChangeImage;
-            this.ButtonChangeImage.FillColor = System.Drawing.Color.White;
-            this.ButtonChangeImage.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ButtonChangeImage.ForeColor = System.Drawing.Color.Gray;
-            this.ButtonChangeImage.HoverState.Parent = this.ButtonChangeImage;
-            this.ButtonChangeImage.Location = new System.Drawing.Point(24, 256);
-            this.ButtonChangeImage.Name = "ButtonChangeImage";
-            this.ButtonChangeImage.ShadowDecoration.Parent = this.ButtonChangeImage;
-            this.ButtonChangeImage.Size = new System.Drawing.Size(239, 36);
-            this.ButtonChangeImage.TabIndex = 9;
-            this.ButtonChangeImage.Text = "Change Image";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(302, 29);
+            this.label2.Location = new System.Drawing.Point(91, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 21);
             this.label2.TabIndex = 7;
             this.label2.Text = "Fullname";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 21);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Image Preview";
             // 
             // label1
             // 
@@ -404,22 +368,6 @@ namespace Chanh_Coffee.View.AdminForms
             this.label1.TabIndex = 5;
             this.label1.Text = "Add new User";
             // 
-            // PictureUserImage
-            // 
-            this.PictureUserImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PictureUserImage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.PictureUserImage.Image = ((System.Drawing.Image)(resources.GetObject("PictureUserImage.Image")));
-            this.PictureUserImage.ImageLocation = "";
-            this.PictureUserImage.ImageRotate = 0F;
-            this.PictureUserImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("PictureUserImage.InitialImage")));
-            this.PictureUserImage.Location = new System.Drawing.Point(24, 65);
-            this.PictureUserImage.Name = "PictureUserImage";
-            this.PictureUserImage.ShadowDecoration.Parent = this.PictureUserImage;
-            this.PictureUserImage.Size = new System.Drawing.Size(239, 185);
-            this.PictureUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureUserImage.TabIndex = 8;
-            this.PictureUserImage.TabStop = false;
-            // 
             // FormAddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,10 +376,9 @@ namespace Chanh_Coffee.View.AdminForms
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
             this.Name = "FormAddUser";
-            this.Size = new System.Drawing.Size(862, 671);
+            this.Size = new System.Drawing.Size(874, 679);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,10 +403,7 @@ namespace Chanh_Coffee.View.AdminForms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button ButtonChangeImage;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2PictureBox PictureUserImage;
         private System.Windows.Forms.Label label1;
     }
 }

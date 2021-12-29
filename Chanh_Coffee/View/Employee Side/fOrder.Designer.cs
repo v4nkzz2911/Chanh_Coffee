@@ -29,9 +29,8 @@ namespace Chanh_Coffee.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fOrder));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ButtonLogout = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtSessionUser = new System.Windows.Forms.LinkLabel();
             this.PictureUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,6 +53,9 @@ namespace Chanh_Coffee.View
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.ButtonClear = new Guna.UI2.WinForms.Guna2Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.PromoAmount = new System.Windows.Forms.Label();
+            this.PromoDes = new System.Windows.Forms.Label();
+            this.cbxPromo = new System.Windows.Forms.ComboBox();
             this.CustomerPayment = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.ButtonProccess = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonCalculateChange = new Guna.UI2.WinForms.Guna2Button();
@@ -65,9 +67,6 @@ namespace Chanh_Coffee.View
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbxPromo = new System.Windows.Forms.ComboBox();
-            this.PromoDes = new System.Windows.Forms.Label();
-            this.PromoAmount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).BeginInit();
             this.panel3.SuspendLayout();
@@ -84,7 +83,7 @@ namespace Chanh_Coffee.View
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel1.Controls.Add(this.ButtonLogout);
+            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.txtSessionUser);
             this.panel1.Controls.Add(this.PictureUserImage);
             this.panel1.Controls.Add(this.label3);
@@ -95,20 +94,19 @@ namespace Chanh_Coffee.View
             this.panel1.Size = new System.Drawing.Size(1198, 52);
             this.panel1.TabIndex = 5;
             // 
-            // ButtonLogout
+            // linkLabel1
             // 
-            this.ButtonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonLogout.CheckedState.Parent = this.ButtonLogout;
-            this.ButtonLogout.HoverState.Parent = this.ButtonLogout;
-            this.ButtonLogout.Image = ((System.Drawing.Image)(resources.GetObject("ButtonLogout.Image")));
-            this.ButtonLogout.ImageOffset = new System.Drawing.Point(0, 0);
-            this.ButtonLogout.ImageRotate = 0F;
-            this.ButtonLogout.Location = new System.Drawing.Point(1153, 10);
-            this.ButtonLogout.Name = "ButtonLogout";
-            this.ButtonLogout.PressedState.Parent = this.ButtonLogout;
-            this.ButtonLogout.ShadowDecoration.Parent = this.ButtonLogout;
-            this.ButtonLogout.Size = new System.Drawing.Size(31, 30);
-            this.ButtonLogout.TabIndex = 7;
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.linkLabel1.LinkColor = System.Drawing.SystemColors.ControlLightLight;
+            this.linkLabel1.Location = new System.Drawing.Point(1071, 16);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(113, 21);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Đổi mật khẩu";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // txtSessionUser
             // 
@@ -493,6 +491,37 @@ namespace Chanh_Coffee.View
             this.panel5.Size = new System.Drawing.Size(439, 153);
             this.panel5.TabIndex = 2;
             // 
+            // PromoAmount
+            // 
+            this.PromoAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PromoAmount.AutoSize = true;
+            this.PromoAmount.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.PromoAmount.Location = new System.Drawing.Point(221, 12);
+            this.PromoAmount.Name = "PromoAmount";
+            this.PromoAmount.Size = new System.Drawing.Size(108, 21);
+            this.PromoAmount.TabIndex = 9;
+            this.PromoAmount.Text = "Promo Amout";
+            // 
+            // PromoDes
+            // 
+            this.PromoDes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PromoDes.AutoSize = true;
+            this.PromoDes.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.PromoDes.Location = new System.Drawing.Point(221, 77);
+            this.PromoDes.Name = "PromoDes";
+            this.PromoDes.Size = new System.Drawing.Size(87, 21);
+            this.PromoDes.TabIndex = 8;
+            this.PromoDes.Text = "Promo Des";
+            // 
+            // cbxPromo
+            // 
+            this.cbxPromo.FormattingEnabled = true;
+            this.cbxPromo.Location = new System.Drawing.Point(335, 13);
+            this.cbxPromo.Name = "cbxPromo";
+            this.cbxPromo.Size = new System.Drawing.Size(98, 21);
+            this.cbxPromo.TabIndex = 7;
+            this.cbxPromo.SelectedIndexChanged += new System.EventHandler(this.cbxPromo_SelectedIndexChanged);
+            // 
             // CustomerPayment
             // 
             this.CustomerPayment.BackColor = System.Drawing.Color.Transparent;
@@ -655,37 +684,6 @@ namespace Chanh_Coffee.View
             this.panel2.Size = new System.Drawing.Size(1194, 677);
             this.panel2.TabIndex = 6;
             // 
-            // cbxPromo
-            // 
-            this.cbxPromo.FormattingEnabled = true;
-            this.cbxPromo.Location = new System.Drawing.Point(335, 13);
-            this.cbxPromo.Name = "cbxPromo";
-            this.cbxPromo.Size = new System.Drawing.Size(98, 21);
-            this.cbxPromo.TabIndex = 7;
-            this.cbxPromo.SelectedIndexChanged += new System.EventHandler(this.cbxPromo_SelectedIndexChanged);
-            // 
-            // PromoDes
-            // 
-            this.PromoDes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PromoDes.AutoSize = true;
-            this.PromoDes.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.PromoDes.Location = new System.Drawing.Point(221, 77);
-            this.PromoDes.Name = "PromoDes";
-            this.PromoDes.Size = new System.Drawing.Size(87, 21);
-            this.PromoDes.TabIndex = 8;
-            this.PromoDes.Text = "Promo Des";
-            // 
-            // PromoAmount
-            // 
-            this.PromoAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PromoAmount.AutoSize = true;
-            this.PromoAmount.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.PromoAmount.Location = new System.Drawing.Point(221, 12);
-            this.PromoAmount.Name = "PromoAmount";
-            this.PromoAmount.Size = new System.Drawing.Size(108, 21);
-            this.PromoAmount.TabIndex = 9;
-            this.PromoAmount.Text = "Promo Amout";
-            // 
             // fOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -718,7 +716,6 @@ namespace Chanh_Coffee.View
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2ImageButton ButtonLogout;
         private System.Windows.Forms.LinkLabel txtSessionUser;
         private Guna.UI2.WinForms.Guna2CirclePictureBox PictureUserImage;
         private System.Windows.Forms.Label label3;
@@ -755,5 +752,6 @@ namespace Chanh_Coffee.View
         private System.Windows.Forms.ComboBox cbxPromo;
         private System.Windows.Forms.Label PromoAmount;
         private System.Windows.Forms.Label PromoDes;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

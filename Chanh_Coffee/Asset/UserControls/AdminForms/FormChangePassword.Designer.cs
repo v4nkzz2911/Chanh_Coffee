@@ -41,7 +41,6 @@ namespace Chanh_Coffee.View.AdminForms
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.LinkBack = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -132,7 +131,7 @@ namespace Chanh_Coffee.View.AdminForms
             this.TextOldPassword.HoverState.Parent = this.TextOldPassword;
             this.TextOldPassword.Location = new System.Drawing.Point(34, 284);
             this.TextOldPassword.Name = "TextOldPassword";
-            this.TextOldPassword.PasswordChar = '\0';
+            this.TextOldPassword.PasswordChar = '●';
             this.TextOldPassword.PlaceholderText = "";
             this.TextOldPassword.SelectedText = "";
             this.TextOldPassword.ShadowDecoration.Parent = this.TextOldPassword;
@@ -159,7 +158,7 @@ namespace Chanh_Coffee.View.AdminForms
             this.TextConfirmPassword.HoverState.Parent = this.TextConfirmPassword;
             this.TextConfirmPassword.Location = new System.Drawing.Point(34, 171);
             this.TextConfirmPassword.Name = "TextConfirmPassword";
-            this.TextConfirmPassword.PasswordChar = '\0';
+            this.TextConfirmPassword.PasswordChar = '●';
             this.TextConfirmPassword.PlaceholderText = "";
             this.TextConfirmPassword.SelectedText = "";
             this.TextConfirmPassword.ShadowDecoration.Parent = this.TextConfirmPassword;
@@ -186,7 +185,7 @@ namespace Chanh_Coffee.View.AdminForms
             this.TextNewPassword.HoverState.Parent = this.TextNewPassword;
             this.TextNewPassword.Location = new System.Drawing.Point(34, 60);
             this.TextNewPassword.Name = "TextNewPassword";
-            this.TextNewPassword.PasswordChar = '\0';
+            this.TextNewPassword.PasswordChar = '●';
             this.TextNewPassword.PlaceholderText = "";
             this.TextNewPassword.SelectedText = "";
             this.TextNewPassword.ShadowDecoration.Parent = this.TextNewPassword;
@@ -200,9 +199,9 @@ namespace Chanh_Coffee.View.AdminForms
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(30, 260);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 21);
+            this.label4.Size = new System.Drawing.Size(169, 21);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Old Password";
+            this.label4.Text = "Nhập lại mật khẩu mới";
             // 
             // label3
             // 
@@ -210,9 +209,9 @@ namespace Chanh_Coffee.View.AdminForms
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(30, 147);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 21);
+            this.label3.Size = new System.Drawing.Size(107, 21);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Retype New Password:";
+            this.label3.Text = "Mật khẩu mới";
             // 
             // label2
             // 
@@ -220,9 +219,9 @@ namespace Chanh_Coffee.View.AdminForms
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(30, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 21);
+            this.label2.Size = new System.Drawing.Size(95, 21);
             this.label2.TabIndex = 7;
-            this.label2.Text = "New Password:";
+            this.label2.Text = "Mật khẩu cũ";
             // 
             // guna2VSeparator1
             // 
@@ -231,26 +230,15 @@ namespace Chanh_Coffee.View.AdminForms
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 30);
             this.guna2VSeparator1.TabIndex = 16;
             // 
-            // LinkBack
-            // 
-            this.LinkBack.AutoSize = true;
-            this.LinkBack.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkBack.Location = new System.Drawing.Point(223, 50);
-            this.LinkBack.Name = "LinkBack";
-            this.LinkBack.Size = new System.Drawing.Size(59, 19);
-            this.LinkBack.TabIndex = 15;
-            this.LinkBack.TabStop = true;
-            this.LinkBack.Text = "Go Back";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(25, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 30);
+            this.label1.Size = new System.Drawing.Size(191, 30);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Change Password";
+            this.label1.Text = "Thay đổi mật khẩu";
             // 
             // FormChangePassword
             // 
@@ -259,7 +247,6 @@ namespace Chanh_Coffee.View.AdminForms
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2VSeparator1);
-            this.Controls.Add(this.LinkBack);
             this.Controls.Add(this.label1);
             this.Name = "FormChangePassword";
             this.Size = new System.Drawing.Size(891, 680);
@@ -284,7 +271,6 @@ namespace Chanh_Coffee.View.AdminForms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
-        private System.Windows.Forms.LinkLabel LinkBack;
         private System.Windows.Forms.Label label1;
     }
 }

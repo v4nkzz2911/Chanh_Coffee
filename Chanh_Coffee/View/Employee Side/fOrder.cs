@@ -34,7 +34,22 @@ namespace Chanh_Coffee.View
             listPromo.Insert(0, new Promotion("Không", null, null, "Không áp dụng giảm giá", 0));
             cbxPromo.DataSource = listPromo;
             cbxPromo.DisplayMember = "idPromo";
+            flowLayoutPanelFoodMenu.Controls.Clear();
+            loadAllFood();
 
+        }
+
+        void loadAllFood()
+        {
+            List<Food> AllFood = FoodDAO.Instance.GetListFood();
+            foreach (Food item in AllFood)
+            {
+                ItemOrder t = new ItemOrder(item);
+                flowLayoutPanelFoodMenu.Controls.Add(t);
+                t.btnAdd.Click += new EventHandler(order_Click);
+                t.btnAdd.Tag = item;
+
+            }
         }
 
 
@@ -218,6 +233,8 @@ namespace Chanh_Coffee.View
             CustomerPayment.Value = 0;
             LabelChange.Text = 0.ToString("c", new CultureInfo("vi-VN"));
             cbxPromo.SelectedIndex = 0;
+            flowLayoutPanelFoodMenu.Controls.Clear();
+            loadAllFood();
         }
 
         private void ButtonCalculateChange_Click(object sender, EventArgs e)
@@ -242,6 +259,13 @@ namespace Chanh_Coffee.View
         {
             PromoAmount.Text = "-"+ listPromo[cbxPromo.SelectedIndex].PricePromo.ToString();
             PromoDes.Text = listPromo[cbxPromo.SelectedIndex].Des.ToString();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            fChangePassword fcp = new fChangePassword(CurrentSession);
+            fcp.ShowDialog();
+
         }
     }
 }

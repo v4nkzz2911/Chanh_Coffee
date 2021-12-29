@@ -283,6 +283,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonUpdateInfo.Size = new System.Drawing.Size(94, 20);
             this.ButtonUpdateInfo.TabIndex = 4;
             this.ButtonUpdateInfo.Text = "Update Info";
+            this.ButtonUpdateInfo.Click += new System.EventHandler(this.ButtonUpdateInfo_Click);
             // 
             // PictureUserImage
             // 
