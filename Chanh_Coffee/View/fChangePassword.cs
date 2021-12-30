@@ -57,5 +57,10 @@ namespace Chanh_Coffee.View
             
             this.Close();
         }
+
+        private void fChangePassword_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

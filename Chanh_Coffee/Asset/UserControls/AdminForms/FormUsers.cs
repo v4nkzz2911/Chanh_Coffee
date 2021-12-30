@@ -1,4 +1,7 @@
-﻿using Chanh_Coffee.View.Admin_Side;
+﻿using Chanh_Coffee.Asset.UserControls.OderForms;
+using Chanh_Coffee.Controls;
+using Chanh_Coffee.Models;
+using Chanh_Coffee.View.Admin_Side;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +20,8 @@ namespace Chanh_Coffee.View.AdminForms
         public FormUsers()
         {
             InitializeComponent();
+            flowLayoutPanelUserList.Controls.Clear();
+            loadAllUser();
         }
 
         private void ButtonAddUser_Click(object sender, EventArgs e)
@@ -25,15 +30,19 @@ namespace Chanh_Coffee.View.AdminForms
             fANU.ShowDialog();
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
 
+        void loadAllUser()
+        {
+            List<Account> AllUser = AccountDAO.Instance.GetListAccount();
+            foreach (Account item in AllUser)
+            {
+                UserItem t = new UserItem(item);
+                flowLayoutPanelUserList.Controls.Add(t);
+
+
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void loadListUser(object sender, EventArgs e)
         {

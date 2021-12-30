@@ -49,10 +49,28 @@ namespace Chanh_Coffee.Controls
             return result.Rows[0]["Name"].ToString();
         }
 
+        
+
         public void ChangePassword(String username, String newpass)
         {
             string query = "exec USP_ChangePassword @username , @newpass ";
             DataProvider.Instace.ExcuteNonQuerry(query, new object[] { username, newpass });
+        }
+        public List<Account> GetListAccount()
+        {
+            List<Account> list = new List<Account>();
+
+            string query = "select * from Account";
+
+            DataTable data = DataProvider.Instace.ExcuteQuerry(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Account account = new Account(item);
+                list.Add(account);
+            }
+
+            return list;
         }
     }
 }

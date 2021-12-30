@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Chanh_Coffee.Models;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,20 @@ namespace Chanh_Coffee.Controls
         private UserDAO()
         {
 
+        }
+
+        public User GetUserByID(string ID)
+        {
+            User x = null;
+            string querry = "Select * From dbo.Employee Where IdEmployee=\'" + ID + "\'";
+            DataTable result = DataProvider.Instace.ExcuteQuerry(querry);
+            foreach (DataRow item in result.Rows)
+            {
+                User t = new User(item);
+                return t;
+            }
+
+            return x;
         }
 
         //public List GetUserList()

@@ -39,13 +39,20 @@ namespace Chanh_Coffee.View
             this.label2 = new System.Windows.Forms.Label();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.label1 = new System.Windows.Forms.Label();
+            this.LabelOldPassword = new System.Windows.Forms.Label();
+            this.LabelNewPassword = new System.Windows.Forms.Label();
+            this.LabelConfirmPassword = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.LabelConfirmPassword);
+            this.guna2Panel1.Controls.Add(this.LabelNewPassword);
+            this.guna2Panel1.Controls.Add(this.LabelOldPassword);
             this.guna2Panel1.Controls.Add(this.ButtonSave);
             this.guna2Panel1.Controls.Add(this.txtConfirmPassword);
             this.guna2Panel1.Controls.Add(this.txtNewPassword);
@@ -205,10 +212,41 @@ namespace Chanh_Coffee.View
             this.label1.TabIndex = 18;
             this.label1.Text = "Thay đổi mật khẩu";
             // 
+            // LabelOldPassword
+            // 
+            this.LabelOldPassword.AutoSize = true;
+            this.LabelOldPassword.ForeColor = System.Drawing.Color.Red;
+            this.LabelOldPassword.Location = new System.Drawing.Point(31, 99);
+            this.LabelOldPassword.Name = "LabelOldPassword";
+            this.LabelOldPassword.Size = new System.Drawing.Size(22, 13);
+            this.LabelOldPassword.TabIndex = 16;
+            this.LabelOldPassword.Text = "red";
+            // 
+            // LabelNewPassword
+            // 
+            this.LabelNewPassword.AutoSize = true;
+            this.LabelNewPassword.ForeColor = System.Drawing.Color.Red;
+            this.LabelNewPassword.Location = new System.Drawing.Point(31, 210);
+            this.LabelNewPassword.Name = "LabelNewPassword";
+            this.LabelNewPassword.Size = new System.Drawing.Size(22, 13);
+            this.LabelNewPassword.TabIndex = 17;
+            this.LabelNewPassword.Text = "red";
+            // 
+            // LabelConfirmPassword
+            // 
+            this.LabelConfirmPassword.AutoSize = true;
+            this.LabelConfirmPassword.ForeColor = System.Drawing.Color.Red;
+            this.LabelConfirmPassword.Location = new System.Drawing.Point(31, 323);
+            this.LabelConfirmPassword.Name = "LabelConfirmPassword";
+            this.LabelConfirmPassword.Size = new System.Drawing.Size(22, 13);
+            this.LabelConfirmPassword.TabIndex = 18;
+            this.LabelConfirmPassword.Text = "red";
+            // 
             // fChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(632, 559);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2VSeparator1);
@@ -217,6 +255,7 @@ namespace Chanh_Coffee.View
             this.Name = "fChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đổi mật khẩu";
+            this.Load += new System.EventHandler(this.fChangePassword_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -236,5 +275,8 @@ namespace Chanh_Coffee.View
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LabelConfirmPassword;
+        private System.Windows.Forms.Label LabelNewPassword;
+        private System.Windows.Forms.Label LabelOldPassword;
     }
 }

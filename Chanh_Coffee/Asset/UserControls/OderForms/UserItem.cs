@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Chanh_Coffee.Models;
+using Chanh_Coffee.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,20 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
 {
     public partial class UserItem : UserControl
     {
-        public UserItem()
+        private Account current;
+        public UserItem(Account item)
         {
             InitializeComponent();
+            current = item;
+            itemUserName.Text = item.UserName;
+            itemType.Text = item.Type;
+
+        }
+
+        private void ButtonUpdate_Click(object sender, EventArgs e)
+        {
+            fUpdateInf fUI = new fUpdateInf(current);
+            fUI.ShowDialog();
         }
     }
 }

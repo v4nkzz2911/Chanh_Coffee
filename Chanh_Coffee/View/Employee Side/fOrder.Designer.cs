@@ -32,7 +32,6 @@ namespace Chanh_Coffee.View
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtSessionUser = new System.Windows.Forms.LinkLabel();
-            this.PictureUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -64,11 +63,11 @@ namespace Chanh_Coffee.View
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.PictureUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).BeginInit();
             this.panel3.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -76,8 +75,9 @@ namespace Chanh_Coffee.View
             this.guna2Panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerPayment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,18 +119,6 @@ namespace Chanh_Coffee.View
             this.txtSessionUser.TabIndex = 6;
             this.txtSessionUser.TabStop = true;
             this.txtSessionUser.Text = "User";
-            // 
-            // PictureUserImage
-            // 
-            this.PictureUserImage.ImageRotate = 0F;
-            this.PictureUserImage.Location = new System.Drawing.Point(7, 6);
-            this.PictureUserImage.Name = "PictureUserImage";
-            this.PictureUserImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.PictureUserImage.ShadowDecoration.Parent = this.PictureUserImage;
-            this.PictureUserImage.Size = new System.Drawing.Size(40, 40);
-            this.PictureUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureUserImage.TabIndex = 5;
-            this.PictureUserImage.TabStop = false;
             // 
             // label3
             // 
@@ -183,10 +171,12 @@ namespace Chanh_Coffee.View
             this.flowLayoutPanelFoodMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanelFoodMenu.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelFoodMenu.Location = new System.Drawing.Point(13, 119);
             this.flowLayoutPanelFoodMenu.Name = "flowLayoutPanelFoodMenu";
             this.flowLayoutPanelFoodMenu.Size = new System.Drawing.Size(691, 527);
             this.flowLayoutPanelFoodMenu.TabIndex = 9;
+            this.flowLayoutPanelFoodMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelFoodMenu_Paint);
             // 
             // guna2Panel3
             // 
@@ -237,9 +227,9 @@ namespace Chanh_Coffee.View
             this.ButtonSearch.CustomImages.Parent = this.ButtonSearch;
             this.ButtonSearch.DisabledState.Parent = this.ButtonSearch;
             this.ButtonSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ButtonSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.ButtonSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             this.ButtonSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ButtonSearch.ForeColor = System.Drawing.Color.Black;
+            this.ButtonSearch.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch.HoverState.Parent = this.ButtonSearch;
             this.ButtonSearch.Location = new System.Drawing.Point(600, 0);
             this.ButtonSearch.Margin = new System.Windows.Forms.Padding(0);
@@ -400,6 +390,7 @@ namespace Chanh_Coffee.View
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderColor = System.Drawing.SystemColors.AppWorkspace;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.ButtonNewOrder);
@@ -421,7 +412,7 @@ namespace Chanh_Coffee.View
             this.ButtonNewOrder.CheckedState.Parent = this.ButtonNewOrder;
             this.ButtonNewOrder.CustomImages.Parent = this.ButtonNewOrder;
             this.ButtonNewOrder.DisabledState.Parent = this.ButtonNewOrder;
-            this.ButtonNewOrder.FillColor = System.Drawing.Color.SeaGreen;
+            this.ButtonNewOrder.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             this.ButtonNewOrder.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ButtonNewOrder.ForeColor = System.Drawing.Color.White;
             this.ButtonNewOrder.HoverState.Parent = this.ButtonNewOrder;
@@ -440,6 +431,7 @@ namespace Chanh_Coffee.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanelOrderList.AutoScroll = true;
+            this.flowLayoutPanelOrderList.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelOrderList.Location = new System.Drawing.Point(10, 70);
             this.flowLayoutPanelOrderList.Name = "flowLayoutPanelOrderList";
             this.flowLayoutPanelOrderList.Size = new System.Drawing.Size(439, 366);
@@ -458,9 +450,9 @@ namespace Chanh_Coffee.View
             this.ButtonClear.CheckedState.Parent = this.ButtonClear;
             this.ButtonClear.CustomImages.Parent = this.ButtonClear;
             this.ButtonClear.DisabledState.Parent = this.ButtonClear;
-            this.ButtonClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.ButtonClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
             this.ButtonClear.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ButtonClear.ForeColor = System.Drawing.Color.Black;
+            this.ButtonClear.ForeColor = System.Drawing.Color.White;
             this.ButtonClear.HoverState.Parent = this.ButtonClear;
             this.ButtonClear.Location = new System.Drawing.Point(280, 439);
             this.ButtonClear.Margin = new System.Windows.Forms.Padding(0);
@@ -562,7 +554,7 @@ namespace Chanh_Coffee.View
             this.ButtonProccess.CheckedState.Parent = this.ButtonProccess;
             this.ButtonProccess.CustomImages.Parent = this.ButtonProccess;
             this.ButtonProccess.DisabledState.Parent = this.ButtonProccess;
-            this.ButtonProccess.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(15)))), ((int)(((byte)(25)))));
+            this.ButtonProccess.FillColor = System.Drawing.Color.SeaGreen;
             this.ButtonProccess.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ButtonProccess.ForeColor = System.Drawing.Color.White;
             this.ButtonProccess.HoverState.Parent = this.ButtonProccess;
@@ -652,17 +644,6 @@ namespace Chanh_Coffee.View
             this.label2.TabIndex = 0;
             this.label2.Text = "Tổng tiền: ";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(14, 21);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -684,6 +665,29 @@ namespace Chanh_Coffee.View
             this.panel2.Size = new System.Drawing.Size(1194, 677);
             this.panel2.TabIndex = 6;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(14, 21);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // PictureUserImage
+            // 
+            this.PictureUserImage.ImageRotate = 0F;
+            this.PictureUserImage.Location = new System.Drawing.Point(7, 6);
+            this.PictureUserImage.Name = "PictureUserImage";
+            this.PictureUserImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PictureUserImage.ShadowDecoration.Parent = this.PictureUserImage;
+            this.PictureUserImage.Size = new System.Drawing.Size(40, 40);
+            this.PictureUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureUserImage.TabIndex = 5;
+            this.PictureUserImage.TabStop = false;
+            // 
             // fOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -698,7 +702,6 @@ namespace Chanh_Coffee.View
             this.Text = "Đặt món";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).EndInit();
             this.panel3.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
@@ -708,8 +711,9 @@ namespace Chanh_Coffee.View
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerPayment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).EndInit();
             this.ResumeLayout(false);
 
         }

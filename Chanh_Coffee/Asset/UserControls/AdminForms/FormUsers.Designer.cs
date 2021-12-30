@@ -29,11 +29,21 @@ namespace Chanh_Coffee.View.AdminForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.flowLayoutPanelUserList = new System.Windows.Forms.FlowLayoutPanel();
             this.ButtonAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewUser = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
             this.SuspendLayout();
+            // 
+            // flowLayoutPanelUserList
+            // 
+            this.flowLayoutPanelUserList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanelUserList.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelUserList.Location = new System.Drawing.Point(34, 72);
+            this.flowLayoutPanelUserList.Name = "flowLayoutPanelUserList";
+            this.flowLayoutPanelUserList.Size = new System.Drawing.Size(878, 428);
+            this.flowLayoutPanelUserList.TabIndex = 18;
             // 
             // ButtonAddUser
             // 
@@ -45,11 +55,11 @@ namespace Chanh_Coffee.View.AdminForms
             this.ButtonAddUser.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ButtonAddUser.ForeColor = System.Drawing.Color.White;
             this.ButtonAddUser.HoverState.Parent = this.ButtonAddUser;
-            this.ButtonAddUser.Location = new System.Drawing.Point(42, 455);
+            this.ButtonAddUser.Location = new System.Drawing.Point(34, 526);
             this.ButtonAddUser.Name = "ButtonAddUser";
             this.ButtonAddUser.ShadowDecoration.Parent = this.ButtonAddUser;
             this.ButtonAddUser.Size = new System.Drawing.Size(180, 45);
-            this.ButtonAddUser.TabIndex = 11;
+            this.ButtonAddUser.TabIndex = 17;
             this.ButtonAddUser.Text = "Thêm người dùng mới";
             this.ButtonAddUser.Click += new System.EventHandler(this.ButtonAddUser_Click);
             // 
@@ -57,40 +67,31 @@ namespace Chanh_Coffee.View.AdminForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 28);
+            this.label1.Location = new System.Drawing.Point(29, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 30);
-            this.label1.TabIndex = 10;
+            this.label1.TabIndex = 16;
             this.label1.Text = "Danh sách người dùng";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // dataGridViewUser
-            // 
-            this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUser.Location = new System.Drawing.Point(42, 75);
-            this.dataGridViewUser.Name = "dataGridViewUser";
-            this.dataGridViewUser.Size = new System.Drawing.Size(651, 374);
-            this.dataGridViewUser.TabIndex = 12;
             // 
             // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.dataGridViewUser);
+            this.Controls.Add(this.flowLayoutPanelUserList);
             this.Controls.Add(this.ButtonAddUser);
             this.Controls.Add(this.label1);
             this.Name = "FormUsers";
-            this.Size = new System.Drawing.Size(731, 528);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).EndInit();
+            this.Size = new System.Drawing.Size(929, 593);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelUserList;
         private Guna.UI2.WinForms.Guna2Button ButtonAddUser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewUser;
     }
 }

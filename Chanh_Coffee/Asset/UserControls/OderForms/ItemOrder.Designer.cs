@@ -40,6 +40,7 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel1.Controls.Add(this.btnAdd);
             this.guna2Panel1.Controls.Add(this.itemPrice);
@@ -84,6 +85,7 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
             this.itemName.Size = new System.Drawing.Size(129, 47);
             this.itemName.TabIndex = 1;
             this.itemName.Text = "tên";
+            this.itemName.Click += new System.EventHandler(this.itemName_Click);
             // 
             // itemImage
             // 

@@ -267,5 +267,10 @@ namespace Chanh_Coffee.View
             fcp.ShowDialog();
 
         }
+
+        private void flowLayoutPanelFoodMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -31,5 +31,10 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
         {
             btnAdd.BackColor = Color.Gray;
         }
+
+        private void itemName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
