@@ -41,7 +41,6 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonLogout = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonsMenuPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ButtonUpdateInfo = new Guna.UI2.WinForms.Guna2Button();
             this.PictureUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
@@ -186,7 +185,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.txtSessionUser.AutoSize = true;
             this.txtSessionUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSessionUser.ForeColor = System.Drawing.Color.LightGray;
-            this.txtSessionUser.Location = new System.Drawing.Point(127, 54);
+            this.txtSessionUser.Location = new System.Drawing.Point(127, 70);
             this.txtSessionUser.Name = "txtSessionUser";
             this.txtSessionUser.Size = new System.Drawing.Size(106, 21);
             this.txtSessionUser.TabIndex = 1;
@@ -258,7 +257,6 @@ namespace Chanh_Coffee.View.Admin_Side
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.panel1.Controls.Add(this.ButtonsMenuPanel);
-            this.panel1.Controls.Add(this.ButtonUpdateInfo);
             this.panel1.Controls.Add(this.txtSessionUser);
             this.panel1.Controls.Add(this.PictureUserImage);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -266,24 +264,6 @@ namespace Chanh_Coffee.View.Admin_Side
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(340, 707);
             this.panel1.TabIndex = 5;
-            // 
-            // ButtonUpdateInfo
-            // 
-            this.ButtonUpdateInfo.Animated = true;
-            this.ButtonUpdateInfo.CheckedState.Parent = this.ButtonUpdateInfo;
-            this.ButtonUpdateInfo.CustomImages.Parent = this.ButtonUpdateInfo;
-            this.ButtonUpdateInfo.DisabledState.Parent = this.ButtonUpdateInfo;
-            this.ButtonUpdateInfo.FillColor = System.Drawing.Color.Empty;
-            this.ButtonUpdateInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ButtonUpdateInfo.ForeColor = System.Drawing.Color.White;
-            this.ButtonUpdateInfo.HoverState.Parent = this.ButtonUpdateInfo;
-            this.ButtonUpdateInfo.Location = new System.Drawing.Point(127, 88);
-            this.ButtonUpdateInfo.Name = "ButtonUpdateInfo";
-            this.ButtonUpdateInfo.ShadowDecoration.Parent = this.ButtonUpdateInfo;
-            this.ButtonUpdateInfo.Size = new System.Drawing.Size(94, 20);
-            this.ButtonUpdateInfo.TabIndex = 4;
-            this.ButtonUpdateInfo.Text = "Update Info";
-            this.ButtonUpdateInfo.Click += new System.EventHandler(this.ButtonUpdateInfo_Click);
             // 
             // PictureUserImage
             // 
@@ -403,7 +383,6 @@ namespace Chanh_Coffee.View.Admin_Side
         private Guna.UI2.WinForms.Guna2Button ButtonLogout;
         private System.Windows.Forms.FlowLayoutPanel ButtonsMenuPanel;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button ButtonUpdateInfo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label txtSessionUser;
         private System.Windows.Forms.Panel panelContent;

@@ -33,5 +33,10 @@ namespace Chanh_Coffee.View
             fChangePassword fCP = new fChangePassword(currentAccount);
             fCP.ShowDialog();
         }
+
+        private void ButtonSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

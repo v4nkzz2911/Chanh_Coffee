@@ -217,9 +217,7 @@ namespace Chanh_Coffee.View
                     
 
                 }
-                
-                    
-                
+                   
             }
 
             
