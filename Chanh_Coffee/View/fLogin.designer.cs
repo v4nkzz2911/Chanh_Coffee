@@ -40,7 +40,7 @@ namespace Chanh_Coffee
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
-            this.btnExit.Font = new System.Drawing.Font("UTM Neo Sans Intel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(84, 516);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(384, 55);
@@ -53,8 +53,8 @@ namespace Chanh_Coffee
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLogin.Font = new System.Drawing.Font("UTM Neo Sans Intel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(84, 441);
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(84, 440);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(384, 55);
             this.btnLogin.TabIndex = 3;
@@ -64,7 +64,7 @@ namespace Chanh_Coffee
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtPassword.Location = new System.Drawing.Point(98, 325);
@@ -75,10 +75,10 @@ namespace Chanh_Coffee
             // 
             // txtUsername
             // 
-            this.txtUsername.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtUsername.Location = new System.Drawing.Point(98, 264);
+            this.txtUsername.Location = new System.Drawing.Point(98, 263);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(354, 26);
             this.txtUsername.TabIndex = 1;
@@ -90,7 +90,7 @@ namespace Chanh_Coffee
             this.guna2PictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(1112, 626);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(1099, 626);
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
             // 

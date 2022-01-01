@@ -223,6 +223,7 @@ namespace Chanh_Coffee.View
             this.ButtonSave.Size = new System.Drawing.Size(146, 45);
             this.ButtonSave.TabIndex = 14;
             this.ButtonSave.Text = "Save";
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // ButtonReset
             // 
