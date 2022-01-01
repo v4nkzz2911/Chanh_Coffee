@@ -82,7 +82,7 @@ namespace Chanh_Coffee.View.Admin_Side
                         File.Delete(filepath + current.Image);
                     }
 
-                    if (!File.Exists(selectedImage))
+                    if (!File.Exists(filepath + Path.GetFileName(selectedImage)))
                     {
                         File.Copy(selectedImage, filepath + Path.GetFileName(selectedImage));
                     }
@@ -96,8 +96,9 @@ namespace Chanh_Coffee.View.Admin_Side
                     FoodDAO.Instance.UpdateFood(current.ID, txtName.Text, cbType.SelectedIndex + 1, Int32.Parse(txtPrice.Value.ToString()), current.Image);
                 }
                 
+                MessageBox.Show("Cập nhật thành công");
             }
-            MessageBox.Show("Cập nhật thành công");
+            
             this.Close();
         }
     }
