@@ -31,16 +31,15 @@ namespace Chanh_Coffee.View.AdminForms
         {
             this.ButtonAddProduct = new Guna.UI2.WinForms.Guna2Button();
             this.TextSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ButtonsMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.ButtonDesserts = new Guna.UI2.WinForms.Guna2Button();
-            this.ButtonSmoothies = new Guna.UI2.WinForms.Guna2Button();
-            this.ButtonDrinks = new Guna.UI2.WinForms.Guna2Button();
-            this.ButtonCoffee = new Guna.UI2.WinForms.Guna2Button();
-            this.ButtonTea = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDrink = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPackages = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCafe = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTea = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCake = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.flowLayoutPanelFoodList = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnShowAll = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,29 +94,6 @@ namespace Chanh_Coffee.View.AdminForms
             this.TextSearch.TabIndex = 13;
             this.TextSearch.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(42, 208);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(758, 298);
-            this.panel1.TabIndex = 12;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(735, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(735, 0);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
             // ButtonsMenu
             // 
             this.ButtonsMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -128,11 +104,11 @@ namespace Chanh_Coffee.View.AdminForms
             this.ButtonsMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.ButtonsMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.ButtonsMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.ButtonsMenu.Controls.Add(this.ButtonDesserts, 0, 0);
-            this.ButtonsMenu.Controls.Add(this.ButtonSmoothies, 0, 0);
-            this.ButtonsMenu.Controls.Add(this.ButtonDrinks, 0, 0);
-            this.ButtonsMenu.Controls.Add(this.ButtonCoffee, 0, 0);
-            this.ButtonsMenu.Controls.Add(this.ButtonTea, 0, 0);
+            this.ButtonsMenu.Controls.Add(this.btnDrink, 0, 0);
+            this.ButtonsMenu.Controls.Add(this.btnPackages, 0, 0);
+            this.ButtonsMenu.Controls.Add(this.btnCafe, 0, 0);
+            this.ButtonsMenu.Controls.Add(this.btnTea, 0, 0);
+            this.ButtonsMenu.Controls.Add(this.btnCake, 0, 0);
             this.ButtonsMenu.Location = new System.Drawing.Point(42, 78);
             this.ButtonsMenu.Name = "ButtonsMenu";
             this.ButtonsMenu.RowCount = 1;
@@ -140,125 +116,129 @@ namespace Chanh_Coffee.View.AdminForms
             this.ButtonsMenu.Size = new System.Drawing.Size(758, 60);
             this.ButtonsMenu.TabIndex = 11;
             // 
-            // ButtonDesserts
+            // btnDrink
             // 
-            this.ButtonDesserts.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.ButtonDesserts.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.ButtonDesserts.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ButtonDesserts.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.ButtonDesserts.CheckedState.Parent = this.ButtonDesserts;
-            this.ButtonDesserts.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.ButtonDesserts.CustomImages.Parent = this.ButtonDesserts;
-            this.ButtonDesserts.DisabledState.Parent = this.ButtonDesserts;
-            this.ButtonDesserts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonDesserts.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.ButtonDesserts.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ButtonDesserts.ForeColor = System.Drawing.Color.DarkGray;
-            this.ButtonDesserts.HoverState.Parent = this.ButtonDesserts;
-            this.ButtonDesserts.Location = new System.Drawing.Point(453, 0);
-            this.ButtonDesserts.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonDesserts.Name = "ButtonDesserts";
-            this.ButtonDesserts.ShadowDecoration.Parent = this.ButtonDesserts;
-            this.ButtonDesserts.Size = new System.Drawing.Size(151, 60);
-            this.ButtonDesserts.TabIndex = 5;
-            this.ButtonDesserts.Tag = "Dessert";
-            this.ButtonDesserts.Text = "Desserts";
+            this.btnDrink.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDrink.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.btnDrink.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDrink.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.btnDrink.CheckedState.Parent = this.btnDrink;
+            this.btnDrink.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnDrink.CustomImages.Parent = this.btnDrink;
+            this.btnDrink.DisabledState.Parent = this.btnDrink;
+            this.btnDrink.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDrink.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnDrink.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDrink.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnDrink.HoverState.Parent = this.btnDrink;
+            this.btnDrink.Location = new System.Drawing.Point(453, 0);
+            this.btnDrink.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDrink.Name = "btnDrink";
+            this.btnDrink.ShadowDecoration.Parent = this.btnDrink;
+            this.btnDrink.Size = new System.Drawing.Size(151, 60);
+            this.btnDrink.TabIndex = 5;
+            this.btnDrink.Tag = "Dessert";
+            this.btnDrink.Text = "Nước uống";
+            this.btnDrink.Click += new System.EventHandler(this.btnDrink_Click);
             // 
-            // ButtonSmoothies
+            // btnPackages
             // 
-            this.ButtonSmoothies.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.ButtonSmoothies.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.ButtonSmoothies.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ButtonSmoothies.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.ButtonSmoothies.CheckedState.Parent = this.ButtonSmoothies;
-            this.ButtonSmoothies.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.ButtonSmoothies.CustomImages.Parent = this.ButtonSmoothies;
-            this.ButtonSmoothies.DisabledState.Parent = this.ButtonSmoothies;
-            this.ButtonSmoothies.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonSmoothies.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.ButtonSmoothies.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ButtonSmoothies.ForeColor = System.Drawing.Color.DarkGray;
-            this.ButtonSmoothies.HoverState.Parent = this.ButtonSmoothies;
-            this.ButtonSmoothies.Location = new System.Drawing.Point(604, 0);
-            this.ButtonSmoothies.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonSmoothies.Name = "ButtonSmoothies";
-            this.ButtonSmoothies.ShadowDecoration.Parent = this.ButtonSmoothies;
-            this.ButtonSmoothies.Size = new System.Drawing.Size(154, 60);
-            this.ButtonSmoothies.TabIndex = 4;
-            this.ButtonSmoothies.Tag = "Smoothies";
-            this.ButtonSmoothies.Text = "Smoothies";
+            this.btnPackages.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnPackages.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.btnPackages.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPackages.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.btnPackages.CheckedState.Parent = this.btnPackages;
+            this.btnPackages.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnPackages.CustomImages.Parent = this.btnPackages;
+            this.btnPackages.DisabledState.Parent = this.btnPackages;
+            this.btnPackages.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPackages.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnPackages.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPackages.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnPackages.HoverState.Parent = this.btnPackages;
+            this.btnPackages.Location = new System.Drawing.Point(604, 0);
+            this.btnPackages.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPackages.Name = "btnPackages";
+            this.btnPackages.ShadowDecoration.Parent = this.btnPackages;
+            this.btnPackages.Size = new System.Drawing.Size(154, 60);
+            this.btnPackages.TabIndex = 4;
+            this.btnPackages.Tag = "Smoothies";
+            this.btnPackages.Text = "Packages";
             // 
-            // ButtonDrinks
+            // btnCafe
             // 
-            this.ButtonDrinks.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.ButtonDrinks.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.ButtonDrinks.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ButtonDrinks.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.ButtonDrinks.CheckedState.Parent = this.ButtonDrinks;
-            this.ButtonDrinks.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.ButtonDrinks.CustomImages.Parent = this.ButtonDrinks;
-            this.ButtonDrinks.DisabledState.Parent = this.ButtonDrinks;
-            this.ButtonDrinks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonDrinks.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.ButtonDrinks.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ButtonDrinks.ForeColor = System.Drawing.Color.DarkGray;
-            this.ButtonDrinks.HoverState.Parent = this.ButtonDrinks;
-            this.ButtonDrinks.Location = new System.Drawing.Point(302, 0);
-            this.ButtonDrinks.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonDrinks.Name = "ButtonDrinks";
-            this.ButtonDrinks.ShadowDecoration.Parent = this.ButtonDrinks;
-            this.ButtonDrinks.Size = new System.Drawing.Size(151, 60);
-            this.ButtonDrinks.TabIndex = 3;
-            this.ButtonDrinks.Tag = "Drinks";
-            this.ButtonDrinks.Text = "Drinks";
+            this.btnCafe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCafe.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.btnCafe.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCafe.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.btnCafe.CheckedState.Parent = this.btnCafe;
+            this.btnCafe.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnCafe.CustomImages.Parent = this.btnCafe;
+            this.btnCafe.DisabledState.Parent = this.btnCafe;
+            this.btnCafe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCafe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnCafe.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCafe.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnCafe.HoverState.Parent = this.btnCafe;
+            this.btnCafe.Location = new System.Drawing.Point(302, 0);
+            this.btnCafe.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCafe.Name = "btnCafe";
+            this.btnCafe.ShadowDecoration.Parent = this.btnCafe;
+            this.btnCafe.Size = new System.Drawing.Size(151, 60);
+            this.btnCafe.TabIndex = 3;
+            this.btnCafe.Tag = "Drinks";
+            this.btnCafe.Text = "Cafe";
+            this.btnCafe.Click += new System.EventHandler(this.btnCafe_Click);
             // 
-            // ButtonCoffee
+            // btnTea
             // 
-            this.ButtonCoffee.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.ButtonCoffee.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.ButtonCoffee.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ButtonCoffee.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.ButtonCoffee.CheckedState.Parent = this.ButtonCoffee;
-            this.ButtonCoffee.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.ButtonCoffee.CustomImages.Parent = this.ButtonCoffee;
-            this.ButtonCoffee.DisabledState.Parent = this.ButtonCoffee;
-            this.ButtonCoffee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonCoffee.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.ButtonCoffee.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ButtonCoffee.ForeColor = System.Drawing.Color.DarkGray;
-            this.ButtonCoffee.HoverState.Parent = this.ButtonCoffee;
-            this.ButtonCoffee.Location = new System.Drawing.Point(0, 0);
-            this.ButtonCoffee.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonCoffee.Name = "ButtonCoffee";
-            this.ButtonCoffee.ShadowDecoration.Parent = this.ButtonCoffee;
-            this.ButtonCoffee.Size = new System.Drawing.Size(151, 60);
-            this.ButtonCoffee.TabIndex = 2;
-            this.ButtonCoffee.Tag = "Coffee";
-            this.ButtonCoffee.Text = "Coffee";
+            this.btnTea.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnTea.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.btnTea.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnTea.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.btnTea.CheckedState.Parent = this.btnTea;
+            this.btnTea.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnTea.CustomImages.Parent = this.btnTea;
+            this.btnTea.DisabledState.Parent = this.btnTea;
+            this.btnTea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTea.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnTea.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTea.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnTea.HoverState.Parent = this.btnTea;
+            this.btnTea.Location = new System.Drawing.Point(0, 0);
+            this.btnTea.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTea.Name = "btnTea";
+            this.btnTea.ShadowDecoration.Parent = this.btnTea;
+            this.btnTea.Size = new System.Drawing.Size(151, 60);
+            this.btnTea.TabIndex = 2;
+            this.btnTea.Tag = "Coffee";
+            this.btnTea.Text = "Trà";
+            this.btnTea.Click += new System.EventHandler(this.btnTea_Click);
             // 
-            // ButtonTea
+            // btnCake
             // 
-            this.ButtonTea.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.ButtonTea.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.ButtonTea.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ButtonTea.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.ButtonTea.CheckedState.Parent = this.ButtonTea;
-            this.ButtonTea.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.ButtonTea.CustomImages.Parent = this.ButtonTea;
-            this.ButtonTea.DisabledState.Parent = this.ButtonTea;
-            this.ButtonTea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonTea.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.ButtonTea.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ButtonTea.ForeColor = System.Drawing.Color.DarkGray;
-            this.ButtonTea.HoverState.Parent = this.ButtonTea;
-            this.ButtonTea.Location = new System.Drawing.Point(151, 0);
-            this.ButtonTea.Margin = new System.Windows.Forms.Padding(0);
-            this.ButtonTea.Name = "ButtonTea";
-            this.ButtonTea.ShadowDecoration.Parent = this.ButtonTea;
-            this.ButtonTea.Size = new System.Drawing.Size(151, 60);
-            this.ButtonTea.TabIndex = 1;
-            this.ButtonTea.Tag = "MilkTea";
-            this.ButtonTea.Text = "Milk Tea";
+            this.btnCake.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCake.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.btnCake.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCake.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.btnCake.CheckedState.Parent = this.btnCake;
+            this.btnCake.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.btnCake.CustomImages.Parent = this.btnCake;
+            this.btnCake.DisabledState.Parent = this.btnCake;
+            this.btnCake.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCake.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnCake.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCake.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnCake.HoverState.Parent = this.btnCake;
+            this.btnCake.Location = new System.Drawing.Point(151, 0);
+            this.btnCake.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCake.Name = "btnCake";
+            this.btnCake.ShadowDecoration.Parent = this.btnCake;
+            this.btnCake.Size = new System.Drawing.Size(151, 60);
+            this.btnCake.TabIndex = 1;
+            this.btnCake.Tag = "MilkTea";
+            this.btnCake.Text = "Bánh ngọt";
+            this.btnCake.Click += new System.EventHandler(this.btnCake_Click);
             // 
             // label1
             // 
@@ -269,22 +249,48 @@ namespace Chanh_Coffee.View.AdminForms
             this.label1.Size = new System.Drawing.Size(137, 30);
             this.label1.TabIndex = 10;
             this.label1.Text = "Quản lý món";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // flowLayoutPanelFoodList
+            // 
+            this.flowLayoutPanelFoodList.AutoScroll = true;
+            this.flowLayoutPanelFoodList.Location = new System.Drawing.Point(41, 212);
+            this.flowLayoutPanelFoodList.Name = "flowLayoutPanelFoodList";
+            this.flowLayoutPanelFoodList.Size = new System.Drawing.Size(793, 295);
+            this.flowLayoutPanelFoodList.TabIndex = 15;
+            // 
+            // btnShowAll
+            // 
+            this.btnShowAll.AutoRoundedCorners = true;
+            this.btnShowAll.BorderRadius = 19;
+            this.btnShowAll.CheckedState.Parent = this.btnShowAll;
+            this.btnShowAll.CustomImages.Parent = this.btnShowAll;
+            this.btnShowAll.DisabledState.Parent = this.btnShowAll;
+            this.btnShowAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.btnShowAll.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnShowAll.ForeColor = System.Drawing.Color.White;
+            this.btnShowAll.HoverState.Parent = this.btnShowAll;
+            this.btnShowAll.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.btnShowAll.Location = new System.Drawing.Point(232, 153);
+            this.btnShowAll.Name = "btnShowAll";
+            this.btnShowAll.ShadowDecoration.Parent = this.btnShowAll;
+            this.btnShowAll.Size = new System.Drawing.Size(161, 40);
+            this.btnShowAll.TabIndex = 16;
+            this.btnShowAll.Text = "Tất cả món";
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
             // FormManageProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnShowAll);
+            this.Controls.Add(this.flowLayoutPanelFoodList);
             this.Controls.Add(this.ButtonAddProduct);
             this.Controls.Add(this.TextSearch);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ButtonsMenu);
             this.Controls.Add(this.label1);
             this.Name = "FormManageProducts";
             this.Size = new System.Drawing.Size(837, 535);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ButtonsMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -295,14 +301,14 @@ namespace Chanh_Coffee.View.AdminForms
 
         private Guna.UI2.WinForms.Guna2Button ButtonAddProduct;
         private Guna.UI2.WinForms.Guna2TextBox TextSearch;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel ButtonsMenu;
-        private Guna.UI2.WinForms.Guna2Button ButtonDesserts;
-        private Guna.UI2.WinForms.Guna2Button ButtonSmoothies;
-        private Guna.UI2.WinForms.Guna2Button ButtonDrinks;
-        private Guna.UI2.WinForms.Guna2Button ButtonCoffee;
-        private Guna.UI2.WinForms.Guna2Button ButtonTea;
+        private Guna.UI2.WinForms.Guna2Button btnDrink;
+        private Guna.UI2.WinForms.Guna2Button btnPackages;
+        private Guna.UI2.WinForms.Guna2Button btnCafe;
+        private Guna.UI2.WinForms.Guna2Button btnTea;
+        private Guna.UI2.WinForms.Guna2Button btnCake;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelFoodList;
+        private Guna.UI2.WinForms.Guna2Button btnShowAll;
     }
 }

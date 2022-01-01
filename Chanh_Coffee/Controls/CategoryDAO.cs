@@ -41,7 +41,7 @@ namespace Chanh_Coffee.Controls
         {
             Category category = null;
 
-            string query = "select * from FoodCategory where id = " + id;
+            string query = "select * from FoodCategory where IdCategory = " + id;
 
             DataTable data = DataProvider.Instace.ExcuteQuerry(query);
 
