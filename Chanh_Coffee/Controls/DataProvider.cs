@@ -11,7 +11,7 @@ namespace Chanh_Coffee.Controls
         private static DataProvider instace;
         
         
-        private string connectionSTR = "Data Source=.;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
+        private string connectionSTR = "Data Source=.\\sqlexpress;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
 
         public static DataProvider Instace 
         { 

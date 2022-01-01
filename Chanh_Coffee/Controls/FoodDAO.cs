@@ -54,6 +54,11 @@ namespace Chanh_Coffee.Controls
             return list;
         }
 
+        public void UpdateFood(int id, string name, int type, int price , string image)
+        {
+            string querry = " exec USP_UpdateProductInf " + id + " , N'" + name + "' , " + type + " , " + price + " , N'"+ image + "'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
+        }
         //public List<Food> SearchFoodByName(string name)
         //{
 

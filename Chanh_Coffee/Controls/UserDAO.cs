@@ -37,6 +37,12 @@ namespace Chanh_Coffee.Controls
             return x;
         }
 
+        public void UpdateInfor(String idEmp, string name, String gender , String add, string phone , String email, int salary, string start )
+        {
+            string querry = " exec USP_UpdateInfor '" + idEmp + "' , N'" + name + "' , N'" + gender + "' , N'" + add + "' , '" + phone +"' , '"+email+"' , "+salary+" , '"+start+"'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
+        }
+
         //public List GetUserList()
         //{
         //    DataTable data = DataProvider.Instace.ExcuteQuerry("Select * from account where UserName = '" + userName + "'");

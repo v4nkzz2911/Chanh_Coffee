@@ -131,6 +131,12 @@
     <Compile Include="View\Admin Side\fAdminPanel.Designer.cs">
       <DependentUpon>fAdminPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin Side\fUpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin Side\fUpdateProduct.Designer.cs">
+      <DependentUpon>fUpdateProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Employee Side\fProcessOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Admin Side\fAdminPanel.resx">
       <DependentUpon>fAdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin Side\fUpdateProduct.resx">
+      <DependentUpon>fUpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Employee Side\fProcessOrder.resx">
       <DependentUpon>fProcessOrder.cs</DependentUpon>

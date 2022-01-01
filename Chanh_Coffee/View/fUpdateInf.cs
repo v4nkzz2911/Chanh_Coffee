@@ -22,10 +22,16 @@ namespace Chanh_Coffee.View
             currentAccount = item;
             currentUser = UserDAO.Instance.GetUserByID(currentAccount.IdEmployee);
 
+            txtMNV.Text = currentUser.IdEmp;
             txtName.Text = currentUser.Name;
-            txtPhone.Text = currentUser.Phone;
+            txtGender.Text = currentUser.Gender;
             txtAdd.Text = currentUser.Add;
+            txtPhone.Text = currentUser.Phone;        
             txtEmail.Text = currentUser.Email;
+            txtSalary.Text = currentUser.Salary.ToString();
+            dateTimePickerStart.Value = currentUser.Start;
+            dateTimePickerStart.Format = DateTimePickerFormat.Custom;
+            dateTimePickerStart.CustomFormat = "dd/MM/yyyy";
         }
 
         private void ButtonChangePassword_Click(object sender, EventArgs e)
@@ -36,7 +42,25 @@ namespace Chanh_Coffee.View
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có muốn cập nhật thông tin?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                UserDAO.Instance.UpdateInfor(txtMNV.Text, txtName.Text, txtGender.Text, txtAdd.Text, txtPhone.Text, txtEmail.Text, Int32.Parse(txtSalary.Text), dateTimePickerStart.Value.ToString("yyyy-MM-dd"));
+                MessageBox.Show("Cập nhật thành công");
+            }
+            
+            this.Close();
+        }
 
+        private void ButtonReset_Click(object sender, EventArgs e)
+        {
+            txtMNV.Text = currentUser.IdEmp;
+            txtName.Text = currentUser.Name;
+            txtGender.Text = currentUser.Gender;
+            txtAdd.Text = currentUser.Add;
+            txtPhone.Text = currentUser.Phone;
+            txtEmail.Text = currentUser.Email;
+            txtSalary.Text = currentUser.Salary.ToString();
+            dateTimePickerStart.Value = currentUser.Start;
         }
     }
 }
