@@ -32,6 +32,7 @@ namespace Chanh_Coffee.View
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtSessionUser = new System.Windows.Forms.LinkLabel();
+            this.PictureUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,11 +64,11 @@ namespace Chanh_Coffee.View
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.PictureUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).BeginInit();
             this.panel3.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -75,9 +76,8 @@ namespace Chanh_Coffee.View
             this.guna2Panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerPayment)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,6 +119,18 @@ namespace Chanh_Coffee.View
             this.txtSessionUser.TabIndex = 6;
             this.txtSessionUser.TabStop = true;
             this.txtSessionUser.Text = "User";
+            // 
+            // PictureUserImage
+            // 
+            this.PictureUserImage.ImageRotate = 0F;
+            this.PictureUserImage.Location = new System.Drawing.Point(7, 6);
+            this.PictureUserImage.Name = "PictureUserImage";
+            this.PictureUserImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PictureUserImage.ShadowDecoration.Parent = this.PictureUserImage;
+            this.PictureUserImage.Size = new System.Drawing.Size(40, 40);
+            this.PictureUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureUserImage.TabIndex = 5;
+            this.PictureUserImage.TabStop = false;
             // 
             // label3
             // 
@@ -171,6 +183,7 @@ namespace Chanh_Coffee.View
             this.flowLayoutPanelFoodMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanelFoodMenu.AutoScroll = true;
             this.flowLayoutPanelFoodMenu.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelFoodMenu.Location = new System.Drawing.Point(13, 119);
             this.flowLayoutPanelFoodMenu.Name = "flowLayoutPanelFoodMenu";
@@ -644,6 +657,17 @@ namespace Chanh_Coffee.View
             this.label2.TabIndex = 0;
             this.label2.Text = "Tổng tiền: ";
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(14, 21);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -665,29 +689,6 @@ namespace Chanh_Coffee.View
             this.panel2.Size = new System.Drawing.Size(1194, 677);
             this.panel2.TabIndex = 6;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(14, 21);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // PictureUserImage
-            // 
-            this.PictureUserImage.ImageRotate = 0F;
-            this.PictureUserImage.Location = new System.Drawing.Point(7, 6);
-            this.PictureUserImage.Name = "PictureUserImage";
-            this.PictureUserImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.PictureUserImage.ShadowDecoration.Parent = this.PictureUserImage;
-            this.PictureUserImage.Size = new System.Drawing.Size(40, 40);
-            this.PictureUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureUserImage.TabIndex = 5;
-            this.PictureUserImage.TabStop = false;
-            // 
             // fOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -702,6 +703,7 @@ namespace Chanh_Coffee.View
             this.Text = "Đặt món";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).EndInit();
             this.panel3.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
@@ -711,9 +713,8 @@ namespace Chanh_Coffee.View
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerPayment)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

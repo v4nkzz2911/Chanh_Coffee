@@ -34,7 +34,7 @@ namespace Chanh_Coffee.View.Admin_Side
             formManageProducts1.Hide();
             formUsers1.Hide();
             
-            formProductArchive1.Hide();
+            formPromotion1.Hide();
         }
 
         private void ButtonLogout_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace Chanh_Coffee.View.Admin_Side
         private void ButtonArchives_Click(object sender, EventArgs e)
         {
             HideAllSubContent();
-            formProductArchive1.Show();
+            formPromotion1.Show();
         }
 
         private void ButtonUpdateInfo_Click(object sender, EventArgs e)
