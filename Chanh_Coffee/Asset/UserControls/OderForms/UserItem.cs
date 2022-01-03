@@ -1,4 +1,5 @@
-﻿using Chanh_Coffee.Models;
+﻿using Chanh_Coffee.Controls;
+using Chanh_Coffee.Models;
 using Chanh_Coffee.View;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,16 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
         {
             fUpdateInf fUI = new fUpdateInf(current);
             fUI.ShowDialog();
+        }
+
+        private void ButtonRemove_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa người dùng?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                AccountDAO.Instance.RemoveUser(current.IdEmployee);
+                UserDAO.Instance.RemoEmployee(current.IdEmployee);
+                MessageBox.Show("xóa thành công");
+            }
         }
     }
 }

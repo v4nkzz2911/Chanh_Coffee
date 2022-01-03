@@ -59,6 +59,21 @@ namespace Chanh_Coffee.Controls
             string querry = " exec USP_UpdateProductInf " + id + " , N'" + name + "' , " + type + " , " + price + " , N'"+ image + "'";
             DataProvider.Instace.ExcuteNonQuerry(querry);
         }
+
+        public void InsertFood(string name, int type, int price, string image)
+        {
+            string querry = " exec USP_InsertFood  N'" + name + "' , " + type + " , " + price + " , N'" + image + "'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
+        }
+
+        public void RemoveFood(String id)
+        {
+            string querry = "DELETE FROM [dbo].[Food] where idFood = '" + id + "'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
+        }
+
+
+
         //public List<Food> SearchFoodByName(string name)
         //{
 

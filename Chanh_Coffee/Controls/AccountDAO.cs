@@ -72,5 +72,17 @@ namespace Chanh_Coffee.Controls
 
             return list;
         }
+
+        public void AddNewUser(string name, String pass, String type, string id)
+        {
+            string querry = " exec USP_AddNewUser  N'" + name + "' , '" + pass + "' , '" + type + "' , N'" + id + "'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
+        }
+
+        public void RemoveUser(String id)
+        {
+            string querry = "DELETE FROM [dbo].[Account] where idEmployee = '" + id + "'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
+        }
     }
 }

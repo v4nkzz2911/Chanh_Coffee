@@ -94,6 +94,7 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
             this.ButtonRemove.ShadowDecoration.Parent = this.ButtonRemove;
             this.ButtonRemove.Size = new System.Drawing.Size(30, 30);
             this.ButtonRemove.TabIndex = 9;
+            this.ButtonRemove.Click += new System.EventHandler(this.ButtonRemove_Click);
             // 
             // ButtonUpdate
             // 
@@ -145,8 +146,8 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
         private Guna.UI2.WinForms.Guna2CirclePictureBox itemPicture;
         private System.Windows.Forms.Label itemUserName;
         private System.Windows.Forms.Label itemType;
-        private Guna.UI2.WinForms.Guna2Button ButtonRemove;
         private Guna.UI2.WinForms.Guna2CircleButton ButtonUpdate;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        public Guna.UI2.WinForms.Guna2Button ButtonRemove;
     }
 }

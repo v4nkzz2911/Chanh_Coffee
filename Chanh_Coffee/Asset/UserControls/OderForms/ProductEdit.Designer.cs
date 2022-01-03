@@ -30,12 +30,12 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.itemImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.itemPrice = new System.Windows.Forms.Label();
             this.itemName = new System.Windows.Forms.Label();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemImage)).BeginInit();
@@ -52,6 +52,20 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(247, 287);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Location = new System.Drawing.Point(133, 222);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(92, 37);
+            this.btnRemove.TabIndex = 5;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnUpdate
             // 
@@ -113,19 +127,6 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
             this.itemName.TabIndex = 0;
             this.itemName.Text = "TEN MON";
             this.itemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(133, 222);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(92, 37);
-            this.btnRemove.TabIndex = 5;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = false;
             // 
             // ProductEdit
             // 
