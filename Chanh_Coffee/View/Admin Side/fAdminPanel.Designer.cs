@@ -32,7 +32,6 @@ namespace Chanh_Coffee.View.Admin_Side
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ButtonManageProduct = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonSales = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonUsers = new Guna.UI2.WinForms.Guna2Button();
@@ -41,20 +40,21 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonLogout = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonsMenuPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PictureUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.formProductArchive1 = new Chanh_Coffee.View.AdminForms.FormProductArchive();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PictureUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.formUsers1 = new Chanh_Coffee.View.AdminForms.FormUsers();
             this.formManageProducts1 = new Chanh_Coffee.View.AdminForms.FormManageProducts();
             this.formSaleReport1 = new Chanh_Coffee.View.AdminForms.FormSaleReport();
+            this.formPromotion1 = new Chanh_Coffee.Asset.UserControls.AdminForms.FormPromotion();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ButtonsMenuPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).BeginInit();
             this.panel5.SuspendLayout();
             this.panelContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ControlBox1
@@ -92,15 +92,6 @@ namespace Chanh_Coffee.View.Admin_Side
             this.label3.Size = new System.Drawing.Size(104, 21);
             this.label3.TabIndex = 1;
             this.label3.Text = "Chanh Coffee";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // ButtonManageProduct
             // 
@@ -214,7 +205,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonArchives.Size = new System.Drawing.Size(340, 45);
             this.ButtonArchives.TabIndex = 14;
             this.ButtonArchives.Tag = "7";
-            this.ButtonArchives.Text = "Kho";
+            this.ButtonArchives.Text = "Mã giảm giá";
             this.ButtonArchives.Click += new System.EventHandler(this.ButtonArchives_Click);
             // 
             // ButtonLogout
@@ -265,18 +256,6 @@ namespace Chanh_Coffee.View.Admin_Side
             this.panel1.Size = new System.Drawing.Size(340, 707);
             this.panel1.TabIndex = 5;
             // 
-            // PictureUserImage
-            // 
-            this.PictureUserImage.ImageRotate = 0F;
-            this.PictureUserImage.Location = new System.Drawing.Point(21, 25);
-            this.PictureUserImage.Name = "PictureUserImage";
-            this.PictureUserImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.PictureUserImage.ShadowDecoration.Parent = this.PictureUserImage;
-            this.PictureUserImage.Size = new System.Drawing.Size(100, 100);
-            this.PictureUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureUserImage.TabIndex = 0;
-            this.PictureUserImage.TabStop = false;
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.panelContent);
@@ -291,7 +270,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.panelContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContent.Controls.Add(this.formProductArchive1);
+            this.panelContent.Controls.Add(this.formPromotion1);
             this.panelContent.Controls.Add(this.formUsers1);
             this.panelContent.Controls.Add(this.formManageProducts1);
             this.panelContent.Controls.Add(this.formSaleReport1);
@@ -300,16 +279,26 @@ namespace Chanh_Coffee.View.Admin_Side
             this.panelContent.Size = new System.Drawing.Size(885, 650);
             this.panelContent.TabIndex = 0;
             // 
-            // formProductArchive1
+            // pictureBox1
             // 
-            this.formProductArchive1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.formProductArchive1.BackColor = System.Drawing.Color.White;
-            this.formProductArchive1.Location = new System.Drawing.Point(-3, -3);
-            this.formProductArchive1.Name = "formProductArchive1";
-            this.formProductArchive1.Size = new System.Drawing.Size(895, 664);
-            this.formProductArchive1.TabIndex = 4;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // PictureUserImage
+            // 
+            this.PictureUserImage.ImageRotate = 0F;
+            this.PictureUserImage.Location = new System.Drawing.Point(21, 25);
+            this.PictureUserImage.Name = "PictureUserImage";
+            this.PictureUserImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PictureUserImage.ShadowDecoration.Parent = this.PictureUserImage;
+            this.PictureUserImage.Size = new System.Drawing.Size(100, 100);
+            this.PictureUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureUserImage.TabIndex = 0;
+            this.PictureUserImage.TabStop = false;
             // 
             // formUsers1
             // 
@@ -344,6 +333,13 @@ namespace Chanh_Coffee.View.Admin_Side
             this.formSaleReport1.Size = new System.Drawing.Size(877, 640);
             this.formSaleReport1.TabIndex = 0;
             // 
+            // formPromotion1
+            // 
+            this.formPromotion1.Location = new System.Drawing.Point(-3, -3);
+            this.formPromotion1.Name = "formPromotion1";
+            this.formPromotion1.Size = new System.Drawing.Size(895, 655);
+            this.formPromotion1.TabIndex = 3;
+            // 
             // fAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,13 +354,13 @@ namespace Chanh_Coffee.View.Admin_Side
             this.Text = "Admin Panel";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ButtonsMenuPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureUserImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -389,6 +385,6 @@ namespace Chanh_Coffee.View.Admin_Side
         private AdminForms.FormSaleReport formSaleReport1;
         private AdminForms.FormManageProducts formManageProducts1;
         private AdminForms.FormUsers formUsers1;
-        private AdminForms.FormProductArchive formProductArchive1;
+        private Asset.UserControls.AdminForms.FormPromotion formPromotion1;
     }
 }

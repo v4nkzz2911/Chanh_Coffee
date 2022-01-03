@@ -23,9 +23,16 @@ namespace Chanh_Coffee.View.AdminForms
             loadAllFood();
         }
 
+        private void ReloadAction(object sender, EventArgs e)
+        {
+            flowLayoutPanelFoodList.Controls.Clear();
+            loadAllFood();
+        }
+
         private void ButtonAddProduct_Click(object sender, EventArgs e)
         {
             fAddProduct f = new fAddProduct();
+            f.ButtonSave.Click += new EventHandler(ReloadAction);
             f.ShowDialog();
         }
 
@@ -35,6 +42,8 @@ namespace Chanh_Coffee.View.AdminForms
             loadAllFood();
         }
 
+        
+
         void loadAllFood()
         {
             List<Food> AllFood = FoodDAO.Instance.GetListFood();
@@ -42,6 +51,7 @@ namespace Chanh_Coffee.View.AdminForms
             {
                 ProductEdit t = new ProductEdit(item);
                 t.btnUpdate.Click += new EventHandler(UpdateAction);
+                t.btnRemove.Click += new EventHandler(UpdateAction);
                 flowLayoutPanelFoodList.Controls.Add(t);
                 
             }
@@ -55,7 +65,10 @@ namespace Chanh_Coffee.View.AdminForms
             foreach (Food item in listFood)
             {
                 ProductEdit t = new ProductEdit(item);
-                flowLayoutPanelFoodList.Controls.Add(t);                       
+                t.btnUpdate.Click += new EventHandler(UpdateAction);
+                t.btnRemove.Click += new EventHandler(UpdateAction);
+                flowLayoutPanelFoodList.Controls.Add(t);
+                
             }
         }
 
@@ -66,7 +79,10 @@ namespace Chanh_Coffee.View.AdminForms
             foreach (Food item in listFood)
             {
                 ProductEdit t = new ProductEdit(item);
+                t.btnUpdate.Click += new EventHandler(UpdateAction);
+                t.btnRemove.Click += new EventHandler(UpdateAction);
                 flowLayoutPanelFoodList.Controls.Add(t);
+                
             }
         }
 
@@ -77,6 +93,8 @@ namespace Chanh_Coffee.View.AdminForms
             foreach (Food item in listFood)
             {
                 ProductEdit t = new ProductEdit(item);
+                t.btnUpdate.Click += new EventHandler(UpdateAction);
+                t.btnRemove.Click += new EventHandler(UpdateAction);
                 flowLayoutPanelFoodList.Controls.Add(t);
             }
         }
@@ -88,6 +106,8 @@ namespace Chanh_Coffee.View.AdminForms
             foreach (Food item in listFood)
             {
                 ProductEdit t = new ProductEdit(item);
+                t.btnUpdate.Click += new EventHandler(UpdateAction);
+                t.btnRemove.Click += new EventHandler(UpdateAction);
                 flowLayoutPanelFoodList.Controls.Add(t);
             }
         }

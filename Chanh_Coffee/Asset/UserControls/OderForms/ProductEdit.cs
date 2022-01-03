@@ -1,10 +1,12 @@
-﻿using Chanh_Coffee.Models;
+﻿using Chanh_Coffee.Controls;
+using Chanh_Coffee.Models;
 using Chanh_Coffee.View.Admin_Side;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +32,23 @@ namespace Chanh_Coffee.Asset.UserControls.OderForms
             fUpdateProduct fUP = new fUpdateProduct(current);
             fUP.ShowDialog();
 
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                FoodDAO.Instance.RemoveFood(current.ID.ToString());
+
+                string filepath = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", string.Empty) + "Asset\\Resources\\FoodIMG\\";
+
+                if (File.Exists(filepath + current.Image))
+                {
+                    File.Delete(filepath + current.Image);
+                }
+
+                MessageBox.Show("Xóa thành công");
+            }
         }
     }
 }

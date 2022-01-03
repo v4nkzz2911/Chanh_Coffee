@@ -43,6 +43,18 @@ namespace Chanh_Coffee.Controls
             DataProvider.Instace.ExcuteNonQuerry(querry);
         }
 
+        public void AddEmployee(String id, string name, String gender, String add, string phone, String email, int salary, string start)
+        {
+            string querry = " exec USP_AddEmployee '" + id + "' , N'" + name + "' , N'" + gender + "' , N'" + add + "' , '" + phone + "' , '" + email + "' , " + salary + " , '" + start + "'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
+        }
+
+        public void RemoEmployee(String id)
+        {
+            string querry = "DELETE FROM [dbo].[Employee] where idEmployee = '" + id + "'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
+        }
+
         //public List GetUserList()
         //{
         //    DataTable data = DataProvider.Instace.ExcuteQuerry("Select * from account where UserName = '" + userName + "'");

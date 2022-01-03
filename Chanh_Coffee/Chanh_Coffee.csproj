@@ -55,7 +55,7 @@
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -72,6 +72,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asset\UserControls\AdminForms\FormPromotion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\FormPromotion.Designer.cs">
+      <DependentUpon>FormPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\PromotionItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Asset\UserControls\AdminForms\PromotionItem.Designer.cs">
+      <DependentUpon>PromotionItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Asset\UserControls\OderForms\ItemOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     <Compile Include="View\Admin Side\fAddProduct.Designer.cs">
       <DependentUpon>fAddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin Side\fAddPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin Side\fAddPromo.Designer.cs">
+      <DependentUpon>fAddPromo.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin Side\fAdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +154,12 @@
     </Compile>
     <Compile Include="View\Admin Side\fUpdateProduct.Designer.cs">
       <DependentUpon>fUpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin Side\fUpdatePromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin Side\fUpdatePromo.Designer.cs">
+      <DependentUpon>fUpdatePromo.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Employee Side\fProcessOrder.cs">
       <SubType>Form</SubType>
@@ -314,6 +338,12 @@
     <Compile Include="View\fUpdateInf.Designer.cs">
       <DependentUpon>fUpdateInf.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\FormPromotion.resx">
+      <DependentUpon>FormPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\UserControls\AdminForms\PromotionItem.resx">
+      <DependentUpon>PromotionItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Asset\UserControls\OderForms\ItemOrder.resx">
       <DependentUpon>ItemOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,11 +362,17 @@
     <EmbeddedResource Include="View\Admin Side\fAddProduct.resx">
       <DependentUpon>fAddProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin Side\fAddPromo.resx">
+      <DependentUpon>fAddPromo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Admin Side\fAdminPanel.resx">
       <DependentUpon>fAdminPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Admin Side\fUpdateProduct.resx">
       <DependentUpon>fUpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin Side\fUpdatePromo.resx">
+      <DependentUpon>fUpdatePromo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Employee Side\fProcessOrder.resx">
       <DependentUpon>fProcessOrder.cs</DependentUpon>

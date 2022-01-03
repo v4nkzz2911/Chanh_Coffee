@@ -9,7 +9,7 @@ namespace Chanh_Coffee.Models
 {
     public class Promotion
     {
-        public Promotion(string idPromo, DateTime? startDate, DateTime? endDate, string des, int pricePromo)
+        public Promotion(string idPromo, DateTime startDate, DateTime endDate, string des, int pricePromo)
         {
             this.idPromo = idPromo;
             this.startDate = startDate;
@@ -21,22 +21,22 @@ namespace Chanh_Coffee.Models
         public Promotion(DataRow row)
         {
             this.idPromo = row["IdPromotion"].ToString();
-            this.startDate = (DateTime?)row["StartDate"];
-            this.endDate = (DateTime?)row["EndDate"];
+            this.startDate = (DateTime)row["StartDate"];
+            this.endDate = (DateTime)row["EndDate"];
             this.des = row["Description"].ToString();
             this.pricePromo = Int32.Parse(row["PricePromotion"].ToString());
         }
         
         
         private string idPromo;
-        private DateTime? startDate;
-        private DateTime? endDate;
+        private DateTime startDate;
+        private DateTime endDate;
         private string des;
         private int pricePromo;
 
         public string IdPromo { get => idPromo; set => idPromo = value; }
-        public DateTime? StartDate { get => startDate; set => startDate = value; }
-        public DateTime? EndDate { get => endDate; set => endDate = value; }
+        public DateTime StartDate { get => startDate; set => startDate = value; }
+        public DateTime EndDate { get => endDate; set => endDate = value; }
         public string Des { get => des; set => des = value; }
         public int PricePromo { get => pricePromo; set => pricePromo = value; }
     }

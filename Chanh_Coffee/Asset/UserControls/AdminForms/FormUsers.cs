@@ -24,9 +24,17 @@ namespace Chanh_Coffee.View.AdminForms
             loadAllUser();
         }
 
+        private void ReloadAction(object sender, EventArgs e)
+        {
+            flowLayoutPanelUserList.Controls.Clear();
+            loadAllUser();
+        }
+
+
         private void ButtonAddUser_Click(object sender, EventArgs e)
         {
             fAddNewUser fANU = new fAddNewUser();
+            fANU.ButtonSave.Click += new EventHandler(ReloadAction);
             fANU.ShowDialog();
         }
 
@@ -37,6 +45,7 @@ namespace Chanh_Coffee.View.AdminForms
             foreach (Account item in AllUser)
             {
                 UserItem t = new UserItem(item);
+                t.ButtonRemove.Click += new EventHandler(ReloadAction);
                 flowLayoutPanelUserList.Controls.Add(t);
 
 
