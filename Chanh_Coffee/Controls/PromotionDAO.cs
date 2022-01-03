@@ -28,8 +28,12 @@ namespace Chanh_Coffee.Controls
 
             foreach (DataRow item in data.Rows)
             {
-                Promotion promo = new Promotion(item);
-                list.Add(promo);
+                if (!item["IdPromotion"].Equals("Không"))
+                {
+                    Promotion promo = new Promotion(item);
+                    list.Add(promo);
+                }
+                
             }
 
             return list;
@@ -55,6 +59,24 @@ namespace Chanh_Coffee.Controls
             }
 
             return list;
+        }
+
+        public void UpdatePromo(string newId , string start , string end , decimal price , string des , string Id)
+        {
+            string querry = "exec USP_UpdatePromo '"+ newId +"' , '"+start+"' , '"+end+"' , "+price+" , N'"+des+"' , '"+Id+"'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
+        }
+
+        public void InsertPromo(string newId, string start, string end, decimal price, string des)
+        {
+            string querry = "exec USP_InsertPromo '" + newId + "' , '" + start + "' , '" + end + "' , " + price + " , N'" + des + "'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
+        }
+
+        public void DeletePromo(string id)
+        {
+            string querry = "DELETE FROM [dbo].[Promotion] WHERE IdPromotion =  '" + id + "'";
+            DataProvider.Instace.ExcuteNonQuerry(querry);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Chanh_Coffee.View
             Thread.CurrentThread.CurrentCulture = (new CultureInfo("vi-VN"));
 
             listPromo = PromotionDAO.Instance.GetListPromotionAvailable();
-            listPromo.Insert(0, new Promotion("Không", null, null, "Không áp dụng giảm giá", 0));
+            listPromo.Insert(0, new Promotion("Không", new DateTime(1990, 01, 01), new DateTime(1990, 01, 02), "Không áp dụng giảm giá", 0));
             cbxPromo.DataSource = listPromo;
             cbxPromo.DisplayMember = "idPromo";
             flowLayoutPanelFoodMenu.Controls.Clear();
@@ -86,6 +86,7 @@ namespace Chanh_Coffee.View
 
         private void ButtonProccess_Click(object sender, EventArgs e)
         {
+            ButtonCalculateChange_Click(sender,e);
             Control.ControlCollection controlsarr = flowLayoutPanelOrderList.Controls;
             if(controlsarr.Count ==0)
             {
@@ -108,7 +109,18 @@ namespace Chanh_Coffee.View
                     else
                     {
                         List<Order> listConfirmed = new List<Order>();
-                        BillDAO.Instance.InsertBill(CurrentSession.IdEmployee, listPromo[cbxPromo.SelectedIndex].IdPromo.ToString(), Int32.Parse((CustomerPayment.Value - changeMon).ToString()));
+
+                        int price;
+                        if((CustomerPayment.Value - changeMon) < 0){
+                            price = 0;
+                        }
+                        else
+                        {
+                            price = Int32.Parse((CustomerPayment.Value - changeMon).ToString());
+                        }
+                        
+
+                        BillDAO.Instance.InsertBill(CurrentSession.IdEmployee, listPromo[cbxPromo.SelectedIndex].IdPromo.ToString(), price);
 
                         foreach (Control t in controlsarr)
                         {
@@ -241,6 +253,11 @@ namespace Chanh_Coffee.View
             temp = temp.Replace(".", string.Empty);
             string discount = PromoAmount.Text.Replace("-", string.Empty);
             decimal changeMon =  CustomerPayment.Value - (decimal)Int32.Parse(temp) + (decimal)Int32.Parse(discount);
+            if ((decimal)Int32.Parse(temp) < (decimal)Int32.Parse(discount))
+            {
+                LabelChange.Text = CustomerPayment.Value.ToString("c", new CultureInfo("vi-VN"));
+                return;
+            }
             if (changeMon < 0)
             {
                 MessageBox.Show("Tiền trả nhỏ hơn lượng cần thanh toán!");
