@@ -72,9 +72,13 @@ namespace Chanh_Coffee.View.Admin_Side
             this.Close();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
-
+            txtName.Text = "";
+            txtIdEmployee.Text = "";
+            cbRole.SelectedIndex = 0;
+            txtPassword.Text = "";
+            txtConfirmPassword.Text = "";
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Chanh_Coffee.View.Admin_Side
         {
             this.label1 = new System.Windows.Forms.Label();
             this.ButtonSave = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonBack = new Guna.UI2.WinForms.Guna2Button();
             this.cbRole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -75,25 +75,25 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonSave.Text = "Save";
             this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
-            // guna2Button1
+            // btnReset
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(96, 507);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(146, 45);
-            this.guna2Button1.TabIndex = 13;
-            this.guna2Button1.Text = "Reset";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReset.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReset.BorderThickness = 1;
+            this.btnReset.CheckedState.Parent = this.btnReset;
+            this.btnReset.CustomImages.Parent = this.btnReset;
+            this.btnReset.DisabledState.Parent = this.btnReset;
+            this.btnReset.FillColor = System.Drawing.Color.White;
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnReset.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReset.HoverState.Parent = this.btnReset;
+            this.btnReset.Location = new System.Drawing.Point(96, 507);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.ShadowDecoration.Parent = this.btnReset;
+            this.btnReset.Size = new System.Drawing.Size(146, 45);
+            this.btnReset.TabIndex = 13;
+            this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // ButtonBack
             // 
@@ -275,7 +275,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.guna2Panel1.BorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.ButtonSave);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.btnReset);
             this.guna2Panel1.Controls.Add(this.ButtonBack);
             this.guna2Panel1.Controls.Add(this.cbRole);
             this.guna2Panel1.Controls.Add(this.txtConfirmPassword);
@@ -342,7 +342,7 @@ namespace Chanh_Coffee.View.Admin_Side
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnReset;
         private Guna.UI2.WinForms.Guna2Button ButtonBack;
         private Guna.UI2.WinForms.Guna2ComboBox cbRole;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;

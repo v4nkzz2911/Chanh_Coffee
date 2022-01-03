@@ -46,5 +46,13 @@ namespace Chanh_Coffee.View.Admin_Side
 
             }
         }
+
+        private void ButtonReset_Click(object sender, EventArgs e)
+        {
+            txtName.Text = "";
+            txtPrice.Value = 0;
+            cbType.SelectedIndex = 0;
+            itemImage.ImageLocation = "";
+        }
     }
 }

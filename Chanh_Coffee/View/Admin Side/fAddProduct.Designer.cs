@@ -123,6 +123,7 @@ namespace Chanh_Coffee.View.Admin_Side
             this.ButtonReset.Size = new System.Drawing.Size(180, 45);
             this.ButtonReset.TabIndex = 7;
             this.ButtonReset.Text = "Reset";
+            this.ButtonReset.Click += new System.EventHandler(this.ButtonReset_Click);
             // 
             // ButtonSave
             // 
